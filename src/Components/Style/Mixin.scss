@@ -3,7 +3,11 @@
   box-shadow: $box-shadow;
   padding: 15px;
   border-radius: 4px;
-  background-color: $bg-color;
+  transition: $transition;
+  &:hover {
+    box-shadow: 0 8px 6px rgb(0 0 0 / 9%);
+    transition: $transition;
+  }
 }
 @mixin d-flex {
   display: flex;
@@ -58,7 +62,7 @@
       margin-bottom: 0;
       color: #2c4491;
       font-weight: $font-500;
-      font-size: 14px;
+      font-size: 16px;
     }
     .percent {
       color: $primary-color;
@@ -69,8 +73,8 @@
     .title {
       margin-bottom: $margin-25;
       color: $font-color;
-      font-size: 20px;
-      font-weight: $font-600;
+      font-size: 28px;
+      font-weight: $font-500;
     }
     .icon {
       @include ml-auto;
@@ -82,11 +86,15 @@
       font-size: 28px;
       border-radius: 100%;
       color: $primary-color;
+      transition: $transition;
     }
     .view-btn {
       color: $seconday-color;
       text-decoration: underline;
       font-size: 14px;
+      &:hover {
+        color: $primary-color;
+      }
     }
   }
 }

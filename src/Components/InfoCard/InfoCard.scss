@@ -3,4 +3,13 @@
 .card-body {
   @include infocard;
   margin-bottom: $margin-25;
+  &:hover {
+    .icon {
+        transform: rotate(60deg);
+        color: $seconday-color;
+    }
+    .view-btn {
+      color: $primary-color;
+    }
+  }
 }

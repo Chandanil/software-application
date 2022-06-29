@@ -73,7 +73,7 @@ export const Table = () => {
                           <td>{item.name}</td>
                           <td>{item.amount}</td>
                           <td>{item.savingAmount}</td>
-                          <td>
+                          <td className="text-center">
                             <span className="trans-btn">
                               {item.transaction}
                             </span>

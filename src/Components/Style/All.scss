@@ -4,6 +4,8 @@ body {
   background-color: $bg-all;
   font-weight: $font-400;
   font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #52595f;
 }
 .container-fluid {
   padding-left: 25px;
@@ -33,19 +35,23 @@ ul {
   border: none;
 }
 .cl-header {
-  padding: 10px;
+  padding: 13px 10px;
   background-color: $bg-color;
   border-bottom: 1px solid $bg-all;
   .title {
     margin-bottom: 0;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: $font-500;
+  }
+  .icon {
+    color: $primary-color;
+    margin-right: 7px;
   }
   @include d-flex;
   span {
     @include ml-auto;
-    margin-right: 12px;
-    color: #bdbdbd;
+    margin-right: 14px;
+    color: #968AAC;
     font-size: 12px;
   }
 }
@@ -55,3 +61,28 @@ ul {
 .small-image {
   @include small-img;
 }
+.cl-tabs {
+  .react-tabs__tab-list {
+    @include ml-auto;
+    .react-tabs__tab {
+      background-color: $seconday-color;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      margin-right: 5px;
+      padding: 4px 10px;
+      outline: none;
+      transition: $transition;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+   .react-tabs__tab--selected{
+      background-color: $primary-color;
+      cursor: auto;
+    }
+  }
+  }

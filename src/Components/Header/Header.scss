@@ -9,6 +9,7 @@
     .main-logo {
       h1 {
         color: $primary-color;
+        font-size: 32px;
         span {
           color: $seconday-color;
         }
@@ -26,6 +27,9 @@
     }
     .cl-search {
       margin-left: 30px;
+      .form-group {
+        width: 205px;
+      }
       .icon {
         width: 37px;
         height: 37px;
@@ -42,11 +46,11 @@
       .secondary-logo {
         .site-title {
           color: $primary-color;
-          font-weight: $font-700;
+          font-weight: $font-600;
           margin-right: $margin-20;
         }
         img {
-          width: 45px;
+          width: 35px;
         }
       }
       .menu-link {

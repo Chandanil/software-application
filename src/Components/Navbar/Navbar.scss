@@ -1,21 +1,26 @@
-@import "../Style/Variables.scss";
-@import "../Style/Mixin.scss";
 @import "../Style/All.scss";
 .cl-navigation {
   padding: 18px 0;
   .navbar-nav {
     .nav-link {
       color: $primary-color;
-      font-weight: $font-600;
-      font-size: 18px;
+      font-weight: $font-500;
+      font-size: 16px;
       padding: 8px 13px;
       margin-right: 10px;
+      transition: $transition;
       &:last-child {
         margin-right: 0;
       }
       .icon {
         color: $seconday-color;
         margin-right: 5px;
+      }
+      &:hover {
+        color: $seconday-color;
+        .icon {
+          color: $primary-color;
+        }
       }
     }
   }

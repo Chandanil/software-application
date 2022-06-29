@@ -1,3 +1,4 @@
+// import Chart from "react-apexcharts";
 import { Todo } from "../ToDo/Todo";
 
 export const LineChart = () => {
@@ -11,6 +12,12 @@ export const LineChart = () => {
                 <div className="cl-header">
                   <h5 className="title">Balance Overview</h5>
                 </div>
+                {/* <Chart
+    options={this.state.options}
+    series={this.state.series}
+    type="line"
+    width="500"
+  /> */}
               </div>
             </div>
             <div className="col-md-4">
