@@ -37,9 +37,6 @@ export const Navs = () => {
               <Nav.Link href="">
                 <i className="fa fa-calendar icon"></i>Calendar
               </Nav.Link>
-              <Nav.Link href="#link">
-                <i className="fa fa-user icon"></i>User
-              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

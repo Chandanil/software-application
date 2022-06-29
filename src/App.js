@@ -8,6 +8,7 @@ import { Navbar, Navs } from "./Components/Navbar/Navbar";
 import { InfoCard } from "./Components/InfoCard/InfoCard";
 import { Table } from "./Components/Table/Table";
 import { LineChart } from "./Components/LineChart/LineChart";
+import { Form } from "./Components/Form/Form";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <InfoCard />
       <LineChart />
       <Table />
+      <Form />
     </div>
   );
 };

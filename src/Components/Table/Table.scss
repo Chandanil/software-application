@@ -1,5 +1,7 @@
 @import "../Style/All.scss";
 .cl-table {
+  background-color: #fff;
+  padding-bottom: 2px;
   @include box-shadow;
   padding: 0;
   font-size: 14px;
