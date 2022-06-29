@@ -1,0 +1,25 @@
+@import "../Style/All.scss";
+.cl-table {
+  @include box-shadow;
+  padding: 0;
+  font-size: 14px;
+
+  th,
+  td {
+    border: none;
+    font-weight: $font-500;
+    padding: 9px 15px;
+  }
+  thead {
+    background: $bg-color1;
+    color: -color;
+    border-bottom: 1px solid $bg-all;
+  }
+  .trans-btn {
+    background-color: $primary-color;
+    color: $bg-color;
+    font-size: 12px;
+    border-radius: 9px;
+    padding: 3px 5px;
+  }
+}

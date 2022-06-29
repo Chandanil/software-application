@@ -1,0 +1,83 @@
+@import "../Style/Mixin.scss";
+@import "../Style/Variables.scss";
+.header-section {
+  background: $bg-color;
+  padding: 10px 0;
+  .top-header {
+    display: flex;
+    align-items: center;
+    .main-logo {
+      h1 {
+        color: $primary-color;
+        span {
+          color: $seconday-color;
+        }
+      }
+    }
+    .left-content,
+    .right-content .content-list {
+      @include d-flex;
+      li {
+        margin-left: 10px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+    .cl-search {
+      margin-left: 30px;
+      .icon {
+        width: 37px;
+        height: 37px;
+        line-height: 37px;
+        position: absolute;
+        text-align: center;
+      }
+      .form-control {
+        @include search;
+      }
+    }
+    .right-content {
+      @include ml-auto;
+      .secondary-logo {
+        .site-title {
+          color: $primary-color;
+          font-weight: $font-700;
+          margin-right: $margin-20;
+        }
+        img {
+          width: 45px;
+        }
+      }
+      .menu-link {
+        .icon {
+          @include header-icon;
+        }
+      }
+      .cl-user {
+        display: flex;
+        align-items: center;
+        img {
+          @include small-img;
+        }
+        p {
+          margin-bottom: 0;
+          font-weight: 500;
+          font-size: 12px;
+          small {
+            display: block;
+            line-height: 10px;
+            font-weight: $font-400;
+            color: #bfbaba;
+          }
+        }
+      }
+    }
+    .cl-dropdown {
+      position: relative;
+      .count {
+        @include count;
+      }
+    }
+  }
+}

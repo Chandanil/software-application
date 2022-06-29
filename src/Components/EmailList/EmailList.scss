@@ -1,0 +1,76 @@
+@import "../Style/All.scss";
+
+.emaillist {
+  @include box-shadow;
+  padding: 0;
+  .email-body {
+    background-color: $bg-color;
+    .select-all {
+      border-bottom: 1px solid $bg-all;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      input {
+        width: 20px;
+        height: 20px;
+        border-radius: 0;
+      }
+      label {
+        margin-left: 10px;
+        color: $primary-color;
+        font-weight: $font-500;
+      }
+    }
+    .list-item {
+      background: $bg-color1;
+      padding: 10px;
+      width: 100%;
+      margin-bottom: 1px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .item {
+        @include d-flex;
+        img {
+          @include small-img;
+        }
+        .title {
+          font-size: 14px;
+        }
+        .sub-title {
+          font-size: 12px;
+          display: block;
+          margin-top: -2px;
+        }
+        .list-icon {
+          margin-left: auto;
+          .status {
+            border-radius: 100%;
+            width: 10px;
+            height: 10px;
+            background: #2dc161;
+            display: inline-block;
+            margin: 0 5px;
+          }
+          .time {
+            font-size: 10px;
+            color: #a9a6a6;
+          }
+        }
+      }
+      .item-select {
+        margin-top: 5px;
+        @include d-flex;
+        i {
+          color: $seconday-color;
+          margin: 0 5px;
+          font-size: 12px;
+        }
+        span {
+          font-size: 12px;
+          color: #101010;
+        }
+      }
+    }
+  }
+}

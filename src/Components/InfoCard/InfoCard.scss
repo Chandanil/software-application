@@ -1,0 +1,6 @@
+@import "../Style/All.scss";
+
+.card-body {
+  @include infocard;
+  margin-bottom: $margin-25;
+}

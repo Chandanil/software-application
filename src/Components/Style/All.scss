@@ -1,0 +1,57 @@
+@import "../Style/Variables.scss";
+@import "../Style/Mixin.scss";
+body {
+  background-color: $bg-all;
+  font-weight: $font-400;
+  font-family: "Poppins", sans-serif;
+}
+.container-fluid {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $font-color;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  li {
+    display: inline-block;
+    list-style-type: none;
+  }
+}
+.table > :not(:first-child) {
+  border: none;
+}
+.cl-header {
+  padding: 10px;
+  background-color: $bg-color;
+  border-bottom: 1px solid $bg-all;
+  .title {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: $font-500;
+  }
+  @include d-flex;
+  span {
+    @include ml-auto;
+    margin-right: 12px;
+    color: #bdbdbd;
+    font-size: 12px;
+  }
+}
+.body-section {
+  margin-bottom: 25px;
+}
+.small-image {
+  @include small-img;
+}

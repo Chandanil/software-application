@@ -1,0 +1,92 @@
+// @import "../Style/Variables.scss";
+@mixin box-shadow {
+  box-shadow: $box-shadow;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: $bg-color;
+}
+@mixin d-flex {
+  display: flex;
+  align-items: center;
+}
+@mixin ml-auto {
+  margin-left: auto;
+}
+@mixin search {
+  border: none;
+  background-color: $bg-color1;
+  padding-left: 37px;
+}
+@mixin header-icon {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  background: $bg-color1;
+  text-align: center;
+  border-radius: 50%;
+}
+@mixin count {
+  font-size: 9px;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  margin-top: 0px;
+  margin-right: -20px;
+  color: #fff;
+  border-radius: 50%;
+  background: #bb3b03;
+}
+@mixin small-img {
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+  border-radius: 100%;
+}
+@mixin infocard {
+  @include box-shadow;
+  background-color: $bg-color;
+  .card-title,
+  .card-content {
+    @include d-flex;
+  }
+  .card-title {
+    margin-bottom: $margin-25;
+    .title {
+      margin-bottom: 0;
+      color: #2c4491;
+      font-weight: $font-500;
+      font-size: 14px;
+    }
+    .percent {
+      color: $primary-color;
+      @include ml-auto;
+    }
+  }
+  .card-content {
+    .title {
+      margin-bottom: $margin-25;
+      color: $font-color;
+      font-size: 20px;
+      font-weight: $font-600;
+    }
+    .icon {
+      @include ml-auto;
+      background-color: $bg-all;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      font-size: 28px;
+      border-radius: 100%;
+      color: $primary-color;
+    }
+    .view-btn {
+      color: $seconday-color;
+      text-decoration: underline;
+      font-size: 14px;
+    }
+  }
+}
