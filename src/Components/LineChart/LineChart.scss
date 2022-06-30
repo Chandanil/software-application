@@ -1,7 +1,9 @@
 @import "../Style/All.scss";
 
 .cl-chart {
+    .line-chart{
 @include box-shadow ;
+    }
 .cl-filter {
     @include ml-auto;
     span {

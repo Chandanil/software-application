@@ -6,11 +6,11 @@ export const LineChart = () => {
   const series = [
     {
       name: "REVENUE",
-      data: [52, 61, 64, 15, 28, 77, 44, 5, 29, 35, 56, 67, 33, 33],
+      data: [0, 5, 10, 15, 28, 40, 44, 5, 29, 35, 56, 67, 33, 33],
     },
     {
       name: "EXPENSESS",
-      data: [12, 41, 4, 38, 28, 24, 22, 45, 29, 23, 12, 30, 32, 43],
+      data: [0, 8, 15, 38, 28, 24, 22, 45, 29, 23, 12, 30, 32, 43],
     },
   ];
   const options: ApexOptions = {
@@ -39,22 +39,15 @@ export const LineChart = () => {
       min: 0,
     },
     xaxis: {
-      labels: {
-        style: {
-          colors: "#000"
-        }
-      },
-      title: {
-        text: "REVENUE",
-        style: {
-          color: "#405189"
-        }
-      }
+      // type: 'category',
+      // categories: ['Jan','Feb','Mar','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+
     },
 
     legend: {
-      position: "top",
-      horizontalAlign: "right",
+      show: true,
+      position: "bottom",
+      horizontalAlign: "left",
       floating: true,
       offsetY: -25,
       offsetX: -5,
@@ -78,7 +71,8 @@ export const LineChart = () => {
                   </select>
                 </div>
               </div>
-              <div className="line-chart-section">
+              <div className="line-chart">
+                <div className="line-chart-section">
                 <div className="bar-title">
                   <div className="d-end">
                     <div className="filter-block">
@@ -106,6 +100,7 @@ export const LineChart = () => {
                     height={350}
                   />
                 </div>
+              </div>
               </div>
             </div>
           </div>
