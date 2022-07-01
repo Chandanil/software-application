@@ -1,5 +1,7 @@
 import "./Header.scss";
 // import { Link } from "react-router-dom";
+import Dropdown from "react-bootstrap/Dropdown";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -48,16 +50,53 @@ export const Header = () => {
                   </div>
                 </li>
                 <li>
-                  <div className="menu-link cl-dropdown">
-                    <i className="fa fa-list icon"></i>
+                  <Dropdown className="menu-link cl-dropdown">
+                <Dropdown.Toggle className="dropdown-btn">
+                <i className="fa fa-list icon"></i>
                     <span class="count">0</span>
-                  </div>
+                </Dropdown.Toggle>
+                <Dropdown.Menu className="dropdown-menu cl-dropdown-menu noti-list">
+                      <div className="cl-header">
+                        <h6 className="title">Notification</h6>
+                        <badge className="cl-badge ">6 New</badge>
+                      </div>
+                      <div className="notification-list">
+                        <ul>
+                          <li>
+                            <div className="avatar">
+                              <img src="Images/testo.jpg" />
+                            </div>
+                            <div className="list-content">
+                              <strong>
+                                Congratulation chandani ! <span>Winner</span>
+                              </strong>
+                              <small>Won the monthly best seller badge</small>
+                            </div>
+                          </li>
+                          <li>
+                            <div className="avatar">
+                              <img src="Images/testo.jpg" />
+                            </div>
+                            <div className="list-content">
+                              <strong>
+                                New Message <span>recieved</span>
+                              </strong>
+                              <small>you have 10 unread message</small>
+                            </div>
+                          </li>
+                        </ul>
+                    </div>
+                </Dropdown.Menu>
+              </Dropdown>
                 </li>
                 <li>
-                  <div className="menu-link cl-noti cl-dropdown">
-                    <i className="fa fa-bell-o icon"></i>
+                    
+                    <Dropdown className="menu-link cl-dropdown">
+                <Dropdown.Toggle className="dropdown-btn">
+                <i className="fa fa-bell-o icon"></i>
                     <span class="count">0</span>
-                    <div className="dropdown-menu cl-dropdown-menu noti-list">
+                </Dropdown.Toggle>
+                <Dropdown.Menu className="dropdown-menu cl-dropdown-menu noti-list">
                       <div className="cl-header">
                         <h6 className="title">Notification</h6>
                         <badge className="cl-badge ">6 New</badge>
@@ -88,31 +127,38 @@ export const Header = () => {
                           </li>
                         </ul>
                       </div>
-                    </div>
-                  </div>
+                  </Dropdown.Menu>
+                  </Dropdown>
                 </li>
                 <li>
-                  <div className="menu-link cl-user cl-dropdown">
-                    <img src="Images/team.jpg" alt="testo" />
+                <Dropdown className="menu-link  cl-dropdown">
+                  <Dropdown.Toggle className="dropdown-btn">
+                    <div className="cl-user">
+                       <img src="Images/team.jpg" alt="testo" />
                     <div className="user-name">
                       <p className="title">
                         Chandani Lama
                         <small>Admin</small>
                       </p>
                     </div>
-                    <ul className="dropdown-menu user-dropdown-menu  cl-dropdown-menu">
+                    </div>
+                </Dropdown.Toggle>
+                <Dropdown.Menu className="dropdown-menu cl-dropdown-menu user-dropdown-menu ">
+                    
+                    <ul >
                       <li className="user-detail">
                         <img src="Images/team.jpg" alt="team" />
                         <p>
                           Chandani Lama- Web Designer
                           <small>Member since Nov. 2012</small>
                         </p>
-                        <a href="" className="btn-small">
+                        <Link to="/" className="btn-small">
                           Sign out
-                        </a>
+                        </Link>
                       </li>
                     </ul>
-                  </div>
+                  </Dropdown.Menu>
+                  </Dropdown>
                 </li>
               </ul>
             </div>

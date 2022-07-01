@@ -3,7 +3,10 @@ import React, { Component } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { Link, useNavigate } from "react-router-dom";
+
 import NavDropdown from "react-bootstrap/NavDropdown";
+
 
 export const Navs = () => {
   return (
@@ -16,10 +19,10 @@ export const Navs = () => {
               <Nav.Link href="#home">
                 <i className="fa fa-bolt icon"></i>Masters
               </Nav.Link>
-              <Nav.Link href="#link">
+              <Nav.Link to="/Form">
                 <i className="fa fa-users icon"></i>Customers
               </Nav.Link>
-              <Nav.Link href="">
+              <Nav.Link to="/">
                 <i className="fa fa-calculator icon"></i>Accounts
               </Nav.Link>
               <Nav.Link href="">

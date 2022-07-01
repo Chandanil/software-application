@@ -34,6 +34,16 @@ ul {
 .table > :not(:first-child) {
   border: none;
 }
+.cl-btn {
+  background-color: $seconday-color;
+  color: #fff;
+  padding: 8px 20px;
+  display: inline-block;
+  border: none;
+  position: relative;
+  border-radius: 3px;
+  font-weight: $font-500;
+}
 .cl-header {
   padding: 13px 10px;
   background-color: $bg-color;
