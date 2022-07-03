@@ -9,8 +9,7 @@ import { Table } from "./Components/Table/Table";
 import { LineChart } from "./Components/LineChart/LineChart";
 import { Form } from "./Components/Form/Form";
 import { useState } from "react";
-
-
+import HorizontalLinearStepper from "./Components/Form/Forms";
 
 const App = () => {
   return (
@@ -21,6 +20,7 @@ const App = () => {
       <LineChart />
       <Table />
       <Form />
+      <HorizontalLinearStepper />
     </div>
   );
 };
