@@ -14,13 +14,12 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-
       <Navs />
-      <Stepper />
+
       <InfoCard />
       <LineChart />
       <Table />
-      <Form />
+      <Stepper />
     </div>
   );
 };
