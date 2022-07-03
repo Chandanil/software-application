@@ -16,11 +16,10 @@ const App = () => {
       <Header />
 
       <Navs />
-      <Stepper />
       <InfoCard />
       <LineChart />
       <Table />
-      <Form />
+      <Stepper />
     </div>
   );
 };

@@ -19,7 +19,7 @@ export const Stepper = () => {
       <div className="arrow-container">
         <div className="arrow-div">
           <div className={page === 1 ? "active" : "completed"}>
-            <p>Component 1</p>
+            <Form />
           </div>
         </div>
         <div className="arrow-div">
@@ -49,7 +49,7 @@ export const Stepper = () => {
 
       <div className="component-div">
         <div className="display">
-          {page === 1 && <Form />}
+          {page === 1 && "one"}
           {page === 2 && "two"}
           {page === 3 && "three"}
           {page === 4 && "four"}
