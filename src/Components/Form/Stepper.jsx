@@ -3,6 +3,7 @@ import { Form } from "./Form";
 
 export const Stepper = () => {
   const [page, setPage] = useState(1);
+  const FormTitle = ["Personal Details", "Account Detail", "Document"];
 
   function goNextPage() {
     setPage((page) => page + 1);
@@ -12,10 +13,20 @@ export const Stepper = () => {
     setPage((page) => page - 1);
   }
 
-  const [style, setStyle] = useState(false);
-
   return (
     <div className="parent-div">
+      <div className="step-item">
+        <ul>
+          {FormTitle.map((item, index) => {
+            return (
+              <li className={`${page > index && "active"}`} key={index}>
+                <i className="fa fa-user-circle icon"></i>
+                {item}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
       <div className="component-div">
         <div className="display">
           {page === 1 && <Form />}
