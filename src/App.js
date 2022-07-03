@@ -8,19 +8,19 @@ import { InfoCard } from "./Components/InfoCard/InfoCard";
 import { Table } from "./Components/Table/Table";
 import { LineChart } from "./Components/LineChart/LineChart";
 import { Form } from "./Components/Form/Form";
-import { useState } from "react";
-import HorizontalLinearStepper from "./Components/Form/Forms";
+import { Stepper } from "./Components/Form/Stepper";
 
 const App = () => {
   return (
     <div className="App">
       <Header />
+
       <Navs />
+      <Stepper />
       <InfoCard />
       <LineChart />
       <Table />
       <Form />
-      <HorizontalLinearStepper />
     </div>
   );
 };
