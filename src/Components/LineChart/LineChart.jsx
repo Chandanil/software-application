@@ -39,8 +39,8 @@ export const LineChart = () => {
     },
     xaxis: {
       categories: [
-        " Jan",
-        " Jan",
+        " 01 Jan",
+        " 02 Jan",
         "03 Jan",
         "04 Jan",
         "05 Jan",
