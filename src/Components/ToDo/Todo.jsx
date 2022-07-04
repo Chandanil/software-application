@@ -37,6 +37,10 @@ export const Todo = () => {
                           if (e.target.checked) {
                             setIsChecked(true);
                             setCheckedItem([...checkeditems, e.target.value]);
+                          } else {
+                            setCheckedItem(
+                              checkeditems.filter((f) => f !== item)
+                            );
                           }
                         }}
                       />
