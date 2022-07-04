@@ -34,7 +34,8 @@ ul {
 .table > :not(:first-child) {
   border: none;
 }
-.cl-btn {
+.cl-btn,
+.cl-btn-op {
   background-color: $seconday-color;
   color: #fff;
   padding: 8px 20px;
@@ -43,6 +44,9 @@ ul {
   position: relative;
   border-radius: 3px;
   font-weight: $font-500;
+}
+.cl-btn-op {
+  background-color: $primary-color;
 }
 .cl-header {
   padding: 13px 10px;
@@ -97,9 +101,9 @@ ul {
   }
 }
 
-.active {
-  background: red;
-}
+// .active {
+//   background: red;
+// }
 
 .line-through {
   text-decoration: line-through;
