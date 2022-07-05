@@ -8,7 +8,8 @@ export const Todo = () => {
   const [activeIndex, setActiveIndex] = useState();
 
   console.log("checkeditems", checkeditems);
-  const FormTitle = ["Personal Details", "Account Detail", "Document"];
+  const FormTitle = ["Personal Details", "Account Detail", "Document", "Web Densig",
+  "Take 15 min rest" ,"Personal Details", "something is here something is there"];
 
   return (
     <>

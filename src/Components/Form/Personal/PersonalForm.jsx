@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Form.scss";
+import "../Form.scss";
 
 export const Form = () => {
   const [page, setPage] = useState(0);
@@ -16,13 +16,13 @@ export const Form = () => {
             <form>
               <div className="step-item">
                 <div className="row">
-                  <div className="col-md-3">
+                  <div className="col-sm-6 col-lg-3">
                     <div className="form-group">
                       <label>Member ID</label>
                       <input type="text" className="form-control" />
                     </div>
                   </div>
-                  <div className="col-md-3">
+                  <div className="col-sm-6 col-lg-3">
                     <div className="form-group">
                       <label>Full Name</label>
                       <input
@@ -34,7 +34,7 @@ export const Form = () => {
                       />
                     </div>
                   </div>
-                  <div className="col-md-3">
+                  <div className="col-sm-6 col-lg-3">
                     <div className="form-group">
                       <label>Devnagarik Name</label>
                       <input type="text" className="form-control" onChange={(e) => {
@@ -42,33 +42,33 @@ export const Form = () => {
                       }} />
                     </div>
                   </div>
-                  <div className="col-md-3">
+                  <div className="col-sm-6 col-lg-3">
                     <div className="form-group">
                       <label>Date</label>
                       <input type="text" className="form-control" onChange={(e) => {setDate(e.target.value)}}/>
                     </div>
                   </div>
-                  <div className="col-md-3">
+                  <div className="col-sm-6 col-lg-3">
                     <div className="form-group">
                       <label>Father Name</label>
                       <input type="text" className="form-control" 
                       onChange={(e) =>{ setFatherName(e.target.value)}} />
                     </div>
                   </div>
-                  <div className="col-md-3">
+                  <div className="col-sm-6 col-lg-3">
                     <div className="form-group">
                       <label>Mother Name</label>
                       
                       <input type="text" className="form-control" onChange={(e) => { setMotherName(e.target.value)}}/>
                     </div>
                   </div>
-                  <div className="col-md-3">
+                  <div className="col-sm-6 col-lg-3">
                     <div className="form-group">
                       <label>Grand Father Name </label>
                       <input type="text" className="form-control" />
                     </div>
                   </div>
-                  <div className="col-md-3">
+                  <div className="col-sm-6 col-lg-3">
                     <div className="form-group">
                       <label>Gender</label>
                       <div className="input-group">
@@ -89,7 +89,7 @@ export const Form = () => {
                   </div>
                   <div className="address  row">
                     <h6 className="sub-title">Permanent Address</h6>
-                    <div className="col-md-3">
+                    <div className="col-sm-6 col-lg-3">
                       <div className="form-group">
                         <label>State </label>
                         <select className="form-control">
@@ -98,7 +98,7 @@ export const Form = () => {
                         </select>
                       </div>
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-sm-6 col-lg-3">
                       <div className="form-group">
                         <label>District </label>
                         <select className="form-control">
@@ -107,7 +107,7 @@ export const Form = () => {
                         </select>
                       </div>
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-sm-6 col-lg-3">
                       <div className="form-group">
                         <label>Municipality/Rural Development </label>
                         <select className="form-control">
@@ -116,7 +116,7 @@ export const Form = () => {
                         </select>
                       </div>
                     </div>
-                    <div className="col-md-1">
+                    <div className="col-sm-2 col-lg-1">
                       <div className="form-group">
                         <label>Ward </label>
                         <select className="form-control">
@@ -125,7 +125,7 @@ export const Form = () => {
                         </select>
                       </div>
                     </div>
-                    <div className="col-md-2">
+                    <div className="col-sm-4 col-lg-2">
                       <div className="form-group">
                         <label>Tol </label>
                         <input type="text" className="form-control" />
@@ -134,7 +134,7 @@ export const Form = () => {
                   </div>
                   <div className="address row">
                     <h6 className="sub-title">Temporary Address</h6>
-                    <div className="col-md-3">
+                    <div className="col-sm-6 col-lg-3">
                       <div className="form-group">
                         <label>State </label>
                         <select className="form-control">
@@ -143,7 +143,7 @@ export const Form = () => {
                         </select>
                       </div>
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-sm-6 col-lg-3">
                       <div className="form-group">
                         <label>District </label>
                         <select className="form-control">
@@ -152,7 +152,7 @@ export const Form = () => {
                         </select>
                       </div>
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-sm-6 col-lg-3">
                       <div className="form-group">
                         <label>Municipality/Rural Development </label>
                         <select className="form-control">
@@ -161,7 +161,7 @@ export const Form = () => {
                         </select>
                       </div>
                     </div>
-                    <div className="col-md-1">
+                    <div className="col-sm-2 col-lg-1">
                       <div className="form-group">
                         <label>Ward </label>
                         <select className="form-control">
@@ -170,7 +170,7 @@ export const Form = () => {
                         </select>
                       </div>
                     </div>
-                    <div className="col-md-2">
+                    <div className="col-sm-4 col-lg-2">
                       <div className="form-group">
                         <label>Tol </label>
                         <input type="text" className="form-control" />
@@ -179,25 +179,25 @@ export const Form = () => {
                   </div>
                   <div className="address row">
                     <h6 className="sub-title">Contact Details</h6>
-                    <div className="col-md-3">
+                    <div className="col-sm-6 ol-lg-3">
                       <div className="form-group">
                         <label>Phone No. </label>
                         <input type="text" className="form-control" />
                       </div>
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-sm-6 ol-lg-3">
                       <div className="form-group">
                         <label>Mobile No. </label>
                         <input type="text" className="form-control" />
                       </div>
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-sm-6 ol-lg-3">
                       <div className="form-group">
                         <label>Email ID </label>
                         <input type="text" className="form-control" />
                       </div>
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-sm-6 ol-lg-3">
                       <div className="form-group">
                         <label>Pan No. </label>
                         <input type="text" className="form-control" />

@@ -1,7 +1,9 @@
 import "./Header.scss";
 // import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
-import { Link, useNavigate } from "react-router-dom";
+// import { Link, useNavigate } from "react-router-dom";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -31,7 +33,7 @@ export const Header = () => {
             </div>
             <div className="right-content">
               <ul className="content-list">
-                <li>
+                <li className="content-item">
                   <div className="secondary-logo">
                     <span className="site-title">
                       Dhanodaye Multi Purpose Co-operative Ltd
@@ -39,17 +41,17 @@ export const Header = () => {
                     <img src="Images/logo.jpg" />
                   </div>
                 </li>
-                <li>
+                <li className="content-item">
                   <div className="menu-link">
                     <i className="fa fa-gear icon"></i>
                   </div>
                 </li>
-                <li>
+                <li className="content-item">
                   <div className="menu-link">
                     <i className="fa fa-arrows-alt icon"></i>
                   </div>
                 </li>
-                <li>
+                <li className="content-item">
                   <Dropdown className="menu-link cl-dropdown">
                 <Dropdown.Toggle className="dropdown-btn">
                 <i className="fa fa-list icon"></i>
@@ -64,7 +66,7 @@ export const Header = () => {
                         <ul>
                           <li>
                             <div className="avatar">
-                              <img src="Images/testo.jpg" />
+                              <img src="Images/team.jpg" />
                             </div>
                             <div className="list-content">
                               <strong>
@@ -75,7 +77,7 @@ export const Header = () => {
                           </li>
                           <li>
                             <div className="avatar">
-                              <img src="Images/testo.jpg" />
+                              <img src="Images/team.jpg" />
                             </div>
                             <div className="list-content">
                               <strong>
@@ -89,7 +91,7 @@ export const Header = () => {
                 </Dropdown.Menu>
               </Dropdown>
                 </li>
-                <li>
+                <li className="content-item">
                     
                     <Dropdown className="menu-link cl-dropdown">
                 <Dropdown.Toggle className="dropdown-btn">
@@ -105,7 +107,7 @@ export const Header = () => {
                         <ul>
                           <li>
                             <div className="avatar">
-                              <img src="Images/testo.jpg" />
+                              <img src="Images/team.jpg" />
                             </div>
                             <div className="list-content">
                               <strong>
@@ -116,7 +118,7 @@ export const Header = () => {
                           </li>
                           <li>
                             <div className="avatar">
-                              <img src="Images/testo.jpg" />
+                              <img src="Images/team.jpg" />
                             </div>
                             <div className="list-content">
                               <strong>
@@ -130,11 +132,11 @@ export const Header = () => {
                   </Dropdown.Menu>
                   </Dropdown>
                 </li>
-                <li>
+                <li className="content-item">
                 <Dropdown className="menu-link  cl-dropdown">
                   <Dropdown.Toggle className="dropdown-btn">
                     <div className="cl-user">
-                       <img src="Images/team.jpg" alt="testo" />
+                       <img src="Images/team.jpg" alt="team" />
                     <div className="user-name">
                       <p className="title">
                         Chandani Lama
@@ -143,18 +145,38 @@ export const Header = () => {
                     </div>
                     </div>
                 </Dropdown.Toggle>
-                <Dropdown.Menu className="dropdown-menu cl-dropdown-menu user-dropdown-menu ">
+                <Dropdown.Menu className="w-auto dropdown-menu cl-dropdown-menu user-dropdown-menu ">
                     
                     <ul >
-                      <li className="user-detail">
-                        <img src="Images/team.jpg" alt="team" />
-                        <p>
-                          Chandani Lama- Web Designer
-                          <small>Member since Nov. 2012</small>
-                        </p>
-                        <Link to="/" className="btn-small">
-                          Sign out
-                        </Link>
+                      <li className="item">
+                       <a href="">
+                       <i className="fa fa-user"></i>
+                        <span>Profile</span>
+                       </a>
+                      </li>
+                      <li className="item">
+                       <a href="">
+                       <i className="fa fa-envelope"></i>
+                        <span>Inbox</span>
+                       </a>
+                      </li>
+                      <li className="item">
+                       <a href="">
+                       <i className="fa fa-check-square-o"></i>
+                        <span>Task</span>
+                       </a>
+                      </li>
+                      <li className="item">
+                       <a href="">
+                       <i className="fa fa-commenting"></i>
+                        <span>Chat</span>
+                       </a>
+                      </li>
+                      <li className="item">
+                       <a href="">
+                       <i className="fa fa-sign-out"></i>
+                        <span>Log Out</span>
+                       </a>
                       </li>
                     </ul>
                   </Dropdown.Menu>

@@ -16,14 +16,14 @@ export const LineChart = () => {
     chart: {
       type: "line",
       toolbar: {
-        show: true,
+        show: false,
       },
     },
-    plotOptions: {
-      bar: {
-        distributed: true,
-      },
-    },
+    // plotOptions: {
+    //   bar: {
+    //     distributed: true,
+    //   },
+    // },
     colors: ["#405189", "#f06548", "#E35F55"],
     dataLabels: {
       enabled: false,
@@ -37,53 +37,42 @@ export const LineChart = () => {
     yaxis: {
       min: 0,
     },
-    xaxis: {
-      categories: [
-        " 01 Jan",
-        " 02 Jan",
-        "03 Jan",
-        "04 Jan",
-        "05 Jan",
-        "06 Jan",
-        "07 Jan",
-        "08 Jan",
-        "09 Jan",
-        "10 Jan",
-        "11 Jan",
-        "12 Jan",
-      ],
-    },
-    tooltip: {
-      y: [
-        {
-          title: {
-            formatter: function (val) {
-              return val + " (mins)";
-            },
-          },
-        },
-        {
-          title: {
-            formatter: function (val) {
-              return val + " per session";
-            },
-          },
-        },
-        {
-          title: {
-            formatter: function (val) {
-              return val;
-            },
-          },
-        },
-      ],
-    },
+    // xaxis: {
+    //   categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan', '06 Jan', '07 Jan', '08 Jan', '09 Jan',
+    //     '10 Jan', '11 Jan', '12 Jan'
+    //   ],
+    // },
+    // tooltip: {
+    //   y: [
+    //     {
+    //       title: {
+    //         formatter: function (val) {
+    //           return val + " (mins)";
+    //         },
+    //       },
+    //     },
+    //     {
+    //       title: {
+    //         formatter: function (val) {
+    //           return val + " per session";
+    //         },
+    //       },
+    //     },
+    //     {
+    //       title: {
+    //         formatter: function (val) {
+    //           return val;
+    //         },
+    //       },
+    //     },
+    //   ],
+    // },
   };
   return (
     <div className="body-section">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-8">
+          <div className="col-md-12 col-lg-8">
             <div className="cl-chart">
               <div className="cl-header">
                 <h2 className="title">Balance Overview</h2>
@@ -130,7 +119,7 @@ export const LineChart = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className=" col-md-12 col-lg-4">
             <Todo />
           </div>
         </div>

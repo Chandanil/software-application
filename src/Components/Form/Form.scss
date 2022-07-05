@@ -30,7 +30,7 @@
 .step-item{
     li {
     color: #E4E4E4;
-    margin: 0 15px 15px 0;
+    margin: 15px 15px 15px 0;
     .icon {
         background-color: #E4E4E4;
         color: #fff;
@@ -74,4 +74,27 @@ li.active {
         }
     }
 }
+}
+.document-form {
+    .upload-btn {
+        background: #fff;
+        border: 1px solid #E4E4E4;
+        width: 100%;
+        height: 250px;
+        border-radius: 4px;
+        color: $primary-color;
+        font-size: 14px;
+        font-weight: $font-500;
+        .icon {
+            display: block;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+    }
+}
+.uploaded-img {
+    width: 100%;
+    height: 3;
+    margin-bottom: 15px;
+    border-radius: 3px;
 }

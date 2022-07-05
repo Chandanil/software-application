@@ -3,3 +3,7 @@ x axsis ma month name aaunu paryo
 table ko status active inactive dekhinu paryo and withdraw paid deposit
 email ko online ra offine{offline huda red aauni}
 setp form next click garda
+
+data table ko ajax
+login ko lagi kkk chaini ani kasari garni in react
+select to ma form edit garni bela ma value select kasari garni

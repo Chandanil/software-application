@@ -1,23 +1,25 @@
-import React from 'react';
-import { useState } from 'react';
-import "./Form.scss";
-
-export const AcDetailForm = ()=> {
-  const  [fullName, setFullName] = useState();
-  return (
-    <div className="personal-form">
+export const InstitutionForm = () => {
+    return (
+        <>
+        <div className="institution-form">
             <form>
               <div className="step-item">
                 <div className="row">
-                  <div className="col-md-3">
+                <div className="col-md-3">
                     <div className="form-group">
-                      <label>Account Number</label>
+                      <label>Member ID</label>
                       <input type="text" className="form-control" />
                     </div>
                   </div>
                   <div className="col-md-3">
                     <div className="form-group">
-                      <label>Full Name</label>
+                      <label>Company Name</label>
+                      <input type="text" className="form-control" />
+                    </div>
+                  </div>
+                  <div className="col-md-3">
+                    <div className="form-group">
+                      <label>Devnagarik Name</label>
                       <input
                         type="text"
                         className="form-control"
@@ -29,37 +31,36 @@ export const AcDetailForm = ()=> {
                   </div>
                   <div className="col-md-3">
                     <div className="form-group">
-                      <label>Mother Name</label>
+                      <label>Establish Date</label>
+                      <input type="text" className="form-control"/>
+                    </div>
+                  </div>
+                  <div className="col-md-3">
+                    <div className="form-group">
+                      <label>Owner Name 1</label>
                       <input type="text" className="form-control" />
                     </div>
                   </div>
                   <div className="col-md-3">
                     <div className="form-group">
-                      <label>Grand Father Name </label>
+                      <label>Owner Name 2</label>
                       <input type="text" className="form-control" />
                     </div>
                   </div>
                   <div className="col-md-3">
                     <div className="form-group">
-                      <label>Gender</label>
-                      <div className="input-group">
-                        <div className="group-item">
-                          <input type="radio" checked />
-                          <label>Male</label>
-                        </div>
-                        <div className="group-item">
-                          <input type="radio" />
-                          <label>Female</label>
-                        </div>
-                        <div className="group-item">
-                          <input type="radio" />
-                          <label>Others</label>
-                        </div>
-                      </div>
+                      <label>Owner Name 3</label>
+                      <input type="text" className="form-control" />
+                    </div>
+                  </div>
+                  <div className="col-md-3">
+                    <div className="form-group">
+                      <label>Owner Name 4</label>
+                      <input type="text" className="form-control" />
                     </div>
                   </div>
                   <div className="address  row">
-                    <h6 className="sub-title">Permanent Address</h6>
+                    <h6 className="sub-title">Office Address</h6>
                     <div className="col-md-3">
                       <div className="form-group">
                         <label>State </label>
@@ -152,5 +153,6 @@ export const AcDetailForm = ()=> {
               </div>
             </form>
         </div>
-  );
+        </>
+    );
 };
