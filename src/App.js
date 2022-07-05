@@ -14,7 +14,6 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-
       <Navs />
       <InfoCard />
       <LineChart />

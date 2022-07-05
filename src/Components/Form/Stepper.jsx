@@ -16,37 +16,6 @@ export const Stepper = () => {
 
   return (
     <div className="parent-div">
-      <div className="arrow-container">
-        <div className="arrow-div">
-          <div className={page === 1 ? "active" : "completed"}>
-            <Form />
-          </div>
-        </div>
-        <div className="arrow-div">
-          <div
-            className={
-              page === 2 ? "active" : page < 2 ? "inactive" : "completed"
-            }
-          >
-            <p>Component 2</p>
-          </div>
-        </div>
-        <div className="arrow-div">
-          <div
-            className={
-              page === 3 ? "active" : page < 3 ? "inactive" : "completed"
-            }
-          >
-            <p>Component 3</p>
-          </div>
-        </div>
-        <div className="arrow-div">
-          <div className={page === 4 ? "active" : "inactive"}>
-            <p>Component 4</p>
-          </div>
-        </div>
-      </div>
-
       <div className="component-div">
         <div className="display">
           {page === 1 && "one"}
@@ -55,10 +24,17 @@ export const Stepper = () => {
           {page === 4 && "four"}
         </div>
 
-        <button onClick={goBackPage} className="btns">
-          Back
-        </button>
-        <button onClick={goNextPage}>Next</button>
+        {page === 1 ? (
+          <button onClick={goNextPage}>Save and next</button>
+        ) : (
+          <>
+            <button onClick={goBackPage} className="btns">
+              Back
+            </button>
+
+            <button onClick={goNextPage}>Next</button>
+          </>
+        )}
       </div>
     </div>
   );
