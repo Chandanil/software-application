@@ -16,10 +16,10 @@ export const Navs = () => {
           {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">
+              <Nav.Link to="/">
                 <i className="fa fa-bolt icon"></i>Masters
               </Nav.Link>
-              <Nav.Link to="/Form">
+              <Nav.Link to="/form">
                 <i className="fa fa-users icon"></i>Customers
               </Nav.Link>
               <Nav.Link to="/">

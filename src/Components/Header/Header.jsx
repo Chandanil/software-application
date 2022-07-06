@@ -1,8 +1,8 @@
 import "./Header.scss";
 // import { Link } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
-// import { Link, useNavigate } from "react-router-dom";
+// import { Link  } from "react-router-dom";
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export const Header = () => {
@@ -13,9 +13,11 @@ export const Header = () => {
           <div className="top-header">
             <div className="left-content">
               <div className="main-logo">
-                <h1>
+               <Link to='/'> 
+                 <h1>
                   Mega<span>Byte</span>
                 </h1>
+                </Link>
               </div>
               <div className="cl-search">
                 <form>

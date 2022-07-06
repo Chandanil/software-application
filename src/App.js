@@ -9,6 +9,8 @@ import { Table } from "./Components/Table/Table";
 import { LineChart } from "./Components/LineChart/LineChart";
 import { Form } from "./Components/Form/Personal/PersonalForm";
 import { Stepper } from "./Components/Form/Stepper";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Home } from "./Components/Homepage/Home";
 // import { AllForm } from "./Components/AllForm";
 
 const App = () => {
@@ -16,10 +18,17 @@ const App = () => {
     <div className="App">
       <Header />
       <Navs />
+      <BrowserRouter>
+      <Routes>
+      <Route path="/" element={<Home />} />
+        <Route path="/form" element={<Stepper />} />
+      </Routes>
+      </BrowserRouter>
+      {/* <Navs />
       <InfoCard />
       <LineChart />
       <Table />
-      <Stepper />
+      <Stepper /> */}
     </div>
   );
 };

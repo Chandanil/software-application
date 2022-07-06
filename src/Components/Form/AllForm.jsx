@@ -1,4 +1,6 @@
-import { Form } from "./Form/Form"
+import { Form } from "./Form/Form";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+
 
 export const AllForm = ()=> {
     return(
@@ -7,7 +9,28 @@ export const AllForm = ()=> {
         <div className="container-fluid">
             <div className="cl-form">
             <h5 className="title">Customer Creation Form</h5>
-              <div className="input-group">
+            <Tabs className="cl-tabs">
+            <TabList>
+              <Tab><div className="group-item">
+                  <input type="radio" />
+                  <label>Institution</label>
+                </div></Tab>
+              <Tab><div className="group-item">
+                  <input type="radio" checked />
+                  <label>Personal</label>
+                </div></Tab>
+                <Tab>
+                  <div className="group-item">
+                  <input type="radio" />
+                  <labeel>Join</labeel>
+                  </div>
+                  </Tab>
+                  <TabPanel>
+                    hi chandani  
+                    </TabPanel>
+            </TabList>
+              </Tabs>
+              {/* <div className="input-group">
                 <div className="group-item">
                   <input type="radio" />
                   <label>Institution</label>
@@ -20,8 +43,8 @@ export const AllForm = ()=> {
                   <input type="radio" />
                   <label>Join</label>
                 </div>
-              </div>
-              <ul>
+              </div> */}
+              {/* <ul>
                   <li className="active">
                     <i className="fa fa-user-circle icon"></i>
                   </li>
@@ -33,7 +56,7 @@ export const AllForm = ()=> {
                     <i className="fa fa-file-o icon"></i>
                     Document
                   </li>
-                </ul>
+                </ul> */}
                 < Form />
             </div>
         </div>
