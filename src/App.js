@@ -3,11 +3,15 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import "../src/Components/Style/All.scss";
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header } from "./Components/Header/Header";
-import { Navbar, Navs } from "./Components/Navbar/Navbar";
+import {  Navs } from "./Components/Navbar/Navbar";
 
 import { Stepper } from "./Components/Form/Stepper";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Router } from "react-router-dom";
 import { Home } from "./Components/Homepage/Home";
+import { Partial } from "./Components/Partial/Partial";
+import { PersonalForm } from "./Components/Form/Personal/PersonalForm";
+import { Tab, Tabs } from "react-tabs";
+import { ClTab } from "./Components/Tab/Tab";
 // import { AllForm } from "./Components/AllForm";
 
 const App = () => {
@@ -16,16 +20,12 @@ const App = () => {
       <BrowserRouter>
         <Header />
         <Navs />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/form" element={<Stepper />} />
+       <Routes>
+          <Route path="/" element={ <Home /> } />
+          <Route path="/form" element={<ClTab />} />
         </Routes>
+        {/* <Stepper/> */}
       </BrowserRouter>
-      {/* <Navs />
-      <InfoCard />
-      <LineChart />
-      <Table />
-      <Stepper /> */}
     </div>
   );
 };
