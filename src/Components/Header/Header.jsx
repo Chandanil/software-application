@@ -1,9 +1,6 @@
 import "./Header.scss";
-// import { Link } from "react-router-dom";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
-// import { Link  } from "react-router-dom";
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -13,10 +10,10 @@ export const Header = () => {
           <div className="top-header">
             <div className="left-content">
               <div className="main-logo">
-               <Link to='/'> 
-                 <h1>
-                  Mega<span>Byte</span>
-                </h1>
+                <Link to="/">
+                  <h1>
+                    Mega<span>Byte</span>
+                  </h1>
                 </Link>
               </div>
               <div className="cl-search">
@@ -55,52 +52,11 @@ export const Header = () => {
                 </li>
                 <li className="content-item">
                   <Dropdown className="menu-link cl-dropdown">
-                <Dropdown.Toggle className="dropdown-btn">
-                <i className="fa fa-list icon"></i>
-                    <span class="count">0</span>
-                </Dropdown.Toggle>
-                <Dropdown.Menu className="dropdown-menu cl-dropdown-menu noti-list">
-                      <div className="cl-header">
-                        <h6 className="title">Notification</h6>
-                        <badge className="cl-badge ">6 New</badge>
-                      </div>
-                      <div className="notification-list">
-                        <ul>
-                          <li>
-                            <div className="avatar">
-                              <img src="Images/team.jpg" />
-                            </div>
-                            <div className="list-content">
-                              <strong>
-                                Congratulation chandani ! <span>Winner</span>
-                              </strong>
-                              <small>Won the monthly best seller badge</small>
-                            </div>
-                          </li>
-                          <li>
-                            <div className="avatar">
-                              <img src="Images/team.jpg" />
-                            </div>
-                            <div className="list-content">
-                              <strong>
-                                New Message <span>recieved</span>
-                              </strong>
-                              <small>you have 10 unread message</small>
-                            </div>
-                          </li>
-                        </ul>
-                    </div>
-                </Dropdown.Menu>
-              </Dropdown>
-                </li>
-                <li className="content-item">
-                    
-                    <Dropdown className="menu-link cl-dropdown">
-                <Dropdown.Toggle className="dropdown-btn">
-                <i className="fa fa-bell-o icon"></i>
-                    <span class="count">0</span>
-                </Dropdown.Toggle>
-                <Dropdown.Menu className="dropdown-menu cl-dropdown-menu noti-list">
+                    <Dropdown.Toggle className="dropdown-btn">
+                      <i className="fa fa-list icon"></i>
+                      <span class="count">0</span>
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu className="dropdown-menu cl-dropdown-menu noti-list">
                       <div className="cl-header">
                         <h6 className="title">Notification</h6>
                         <badge className="cl-badge ">6 New</badge>
@@ -131,57 +87,96 @@ export const Header = () => {
                           </li>
                         </ul>
                       </div>
-                  </Dropdown.Menu>
+                    </Dropdown.Menu>
                   </Dropdown>
                 </li>
                 <li className="content-item">
-                <Dropdown className="menu-link  cl-dropdown">
-                  <Dropdown.Toggle className="dropdown-btn">
-                    <div className="cl-user">
-                       <img src="Images/team.jpg" alt="team" />
-                    <div className="user-name">
-                      <p className="title">
-                        Chandani Lama
-                        <small>Admin</small>
-                      </p>
-                    </div>
-                    </div>
-                </Dropdown.Toggle>
-                <Dropdown.Menu className="w-auto dropdown-menu cl-dropdown-menu user-dropdown-menu ">
-                    
-                    <ul >
-                      <li className="item">
-                       <a href="">
-                       <i className="fa fa-user"></i>
-                        <span>Profile</span>
-                       </a>
-                      </li>
-                      <li className="item">
-                       <a href="">
-                       <i className="fa fa-envelope"></i>
-                        <span>Inbox</span>
-                       </a>
-                      </li>
-                      <li className="item">
-                       <a href="">
-                       <i className="fa fa-check-square-o"></i>
-                        <span>Task</span>
-                       </a>
-                      </li>
-                      <li className="item">
-                       <a href="">
-                       <i className="fa fa-commenting"></i>
-                        <span>Chat</span>
-                       </a>
-                      </li>
-                      <li className="item">
-                       <a href="">
-                       <i className="fa fa-sign-out"></i>
-                        <span>Log Out</span>
-                       </a>
-                      </li>
-                    </ul>
-                  </Dropdown.Menu>
+                  <Dropdown className="menu-link cl-dropdown">
+                    <Dropdown.Toggle className="dropdown-btn">
+                      <i className="fa fa-bell-o icon"></i>
+                      <span class="count">0</span>
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu className="dropdown-menu cl-dropdown-menu noti-list">
+                      <div className="cl-header">
+                        <h6 className="title">Notification</h6>
+                        <badge className="cl-badge ">6 New</badge>
+                      </div>
+                      <div className="notification-list">
+                        <ul>
+                          <li>
+                            <div className="avatar">
+                              <img src="Images/team.jpg" />
+                            </div>
+                            <div className="list-content">
+                              <strong>
+                                Congratulation chandani ! <span>Winner</span>
+                              </strong>
+                              <small>Won the monthly best seller badge</small>
+                            </div>
+                          </li>
+                          <li>
+                            <div className="avatar">
+                              <img src="Images/team.jpg" />
+                            </div>
+                            <div className="list-content">
+                              <strong>
+                                New Message <span>recieved</span>
+                              </strong>
+                              <small>you have 10 unread message</small>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </li>
+                <li className="content-item">
+                  <Dropdown className="menu-link  cl-dropdown">
+                    <Dropdown.Toggle className="dropdown-btn">
+                      <div className="cl-user">
+                        <img src="Images/team.jpg" alt="team" />
+                        <div className="user-name">
+                          <p className="title">
+                            Chandani Lama
+                            <small>Admin</small>
+                          </p>
+                        </div>
+                      </div>
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu className="w-auto dropdown-menu cl-dropdown-menu user-dropdown-menu ">
+                      <ul>
+                        <li className="item">
+                          <a href="">
+                            <i className="fa fa-user"></i>
+                            <span>Profile</span>
+                          </a>
+                        </li>
+                        <li className="item">
+                          <a href="">
+                            <i className="fa fa-envelope"></i>
+                            <span>Inbox</span>
+                          </a>
+                        </li>
+                        <li className="item">
+                          <a href="">
+                            <i className="fa fa-check-square-o"></i>
+                            <span>Task</span>
+                          </a>
+                        </li>
+                        <li className="item">
+                          <a href="">
+                            <i className="fa fa-commenting"></i>
+                            <span>Chat</span>
+                          </a>
+                        </li>
+                        <li className="item">
+                          <a href="">
+                            <i className="fa fa-sign-out"></i>
+                            <span>Log Out</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </Dropdown.Menu>
                   </Dropdown>
                 </li>
               </ul>
