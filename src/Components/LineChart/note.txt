@@ -1,8 +1,8 @@
-form ko icon not changed
-while clicking on email checkall  box all checkbox should be checked
+
+while clicking on emal checkall  box all checkbox should be checked
 x axsis ma month name aaunu paryo
 setp form next click garda
 
 data table ko ajax
-login ko lagi kkk chaini ani kasari garni in react
-select to ma form edit garni bela ma value select kasari garni
+login ko lagi kkk chaini ani kasari garni in react kasari garni
+select to ma form edit garni bela ma value select
