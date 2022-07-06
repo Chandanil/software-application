@@ -22,7 +22,13 @@ h6 {
   font-weight: 600;
   margin-bottom: 0;
 }
-
+a {
+  text-decoration: none;
+  color: #52595f;
+  &:hover {
+    color: $seconday-color;
+  }
+}
 ul {
   padding-left: 0;
   margin-bottom: 0;
@@ -34,7 +40,8 @@ ul {
 .table > :not(:first-child) {
   border: none;
 }
-.cl-btn {
+.cl-btn,
+.cl-btn-op {
   background-color: $seconday-color;
   color: #fff;
   padding: 8px 20px;
@@ -43,6 +50,9 @@ ul {
   position: relative;
   border-radius: 3px;
   font-weight: $font-500;
+}
+.cl-btn-op {
+  background-color: $primary-color;
 }
 .cl-header {
   padding: 13px 10px;
@@ -61,7 +71,7 @@ ul {
   span {
     @include ml-auto;
     margin-right: 14px;
-    color: #968AAC;
+    color: #968aac;
     font-size: 12px;
   }
 }
@@ -86,13 +96,22 @@ ul {
       padding: 4px 10px;
       outline: none;
       transition: $transition;
-      &:last-child{
+      &:last-child {
         margin-right: 0;
       }
     }
-   .react-tabs__tab--selected{
+    .react-tabs__tab--selected {
       background-color: $primary-color;
       cursor: auto;
     }
   }
-  }
+}
+
+// .active {
+//   background: red;
+// }
+
+.line-through {
+  text-decoration: line-through;
+  color: #cbc9c9;
+}

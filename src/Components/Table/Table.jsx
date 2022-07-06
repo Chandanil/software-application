@@ -50,7 +50,7 @@ export const Table = () => {
       <div className="body-section">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-8">
+            <div className="col-md-12 col-lg-8">
               <div className="cl-table">
                 <div className="cl-header">
                   <h5 className="title">Transaction Status</h5>
@@ -86,7 +86,7 @@ export const Table = () => {
                 </table>
               </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-lg-4">
               <EmailList />
             </div>
           </div>

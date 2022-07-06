@@ -5,7 +5,9 @@
   @include box-shadow;
   padding: 0;
   font-size: 14px;
-
+.table {
+  margin-bottom: 0;
+}
   th,
   td {
     border: none;
@@ -29,6 +31,17 @@
       color: #333;
       font-weight: $font-400;
       font-size: 16px;
+    }
+  }
+}
+@media only screen and (max-width: 991px) {
+  .cl-table {
+    margin-bottom: 25px;
+    .table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+      width: 100%;;
     }
   }
 }

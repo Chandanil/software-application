@@ -57,7 +57,7 @@ export const InfoCard = () => {
           <div className="row">
             {data?.map((item, index) => {
               return (
-                <div className="col-md-3">
+                <div className="col-12 col-sm-6 col-lg-3">
                   <div className="card-body">
                     <div className="card-title">
                       <p className="title">{item.title}</p>
