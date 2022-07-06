@@ -4,6 +4,8 @@ export const DocumentForm = () => {
   const [activeindex, setActiveIndex] = useState();
   const [selectedFile, setSelectedFile] = useState();
   const [preview, setPreview] = useState();
+
+  const [file, setFile] = useState([]);
   // create a preview as a side effect, whenever selected file is changed
   useEffect(() => {
     if (!selectedFile) {
@@ -43,7 +45,7 @@ export const DocumentForm = () => {
             <div className="row">
               {uploadDoc?.map((item, index) => {
                 return (
-                  <div className="col-sm-6 col-lg-3">
+                  <div className="col-sm-6 col-lg-3" key={index}>
                     <div className="form-group">
                       <input
                         type="file"
@@ -53,7 +55,7 @@ export const DocumentForm = () => {
                         hidden
                       />
                       {selectedFile && (
-                        <img src={preview} className="uploaded-img" />
+                        <img src={preview} className="uploaded-img" alt="img" />
                       )}
                       <button
                         type="button"

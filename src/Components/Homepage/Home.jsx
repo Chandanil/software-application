@@ -1,14 +1,18 @@
-import React from 'react'
-import { Table } from '../Table/Table'
-import { InfoCard } from '../InfoCard/InfoCard'
-import { LineChart } from '../LineChart/LineChart'
+import React from "react";
+import { Table } from "../Table/Table";
+import { InfoCard } from "../InfoCard/InfoCard";
+import { LineChart } from "../LineChart/LineChart";
+import { DocumentForm } from "../Form/Personal/DocumentForm";
 
-export const Home = ()  => {
+export const Home = () => {
   return (
     <>
-    <InfoCard />
-    <LineChart />
-    <Table />
+      <div style={{ margin: "40px" }}>
+        <DocumentForm />
+      </div>
+      <InfoCard />
+      <LineChart />
+      <Table />
     </>
-  )
-}
+  );
+};
