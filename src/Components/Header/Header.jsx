@@ -146,34 +146,34 @@ export const Header = () => {
                     <Dropdown.Menu className="w-auto dropdown-menu cl-dropdown-menu user-dropdown-menu ">
                       <ul>
                         <li className="item">
-                          <a href="">
+                          <Link to="/profile">
                             <i className="fa fa-user"></i>
                             <span>Profile</span>
-                          </a>
+                          </Link>
                         </li>
                         <li className="item">
-                          <a href="">
+                          <Link to="inbox">
                             <i className="fa fa-envelope"></i>
                             <span>Inbox</span>
-                          </a>
+                          </Link>
                         </li>
                         <li className="item">
-                          <a href="">
+                          <Link to="task">
                             <i className="fa fa-check-square-o"></i>
                             <span>Task</span>
-                          </a>
+                          </Link>
                         </li>
                         <li className="item">
-                          <a href="">
+                          <Link to="/chat">
                             <i className="fa fa-commenting"></i>
                             <span>Chat</span>
-                          </a>
+                          </Link>
                         </li>
                         <li className="item">
-                          <a href="">
+                          <Link to="/logout">
                             <i className="fa fa-sign-out"></i>
                             <span>Log Out</span>
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </Dropdown.Menu>

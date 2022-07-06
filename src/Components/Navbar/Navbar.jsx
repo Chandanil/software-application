@@ -16,30 +16,30 @@ export const Navs = () => {
           {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link to="/">
-                <i className="fa fa-bolt icon"></i>Masters
-              </Nav.Link>
-              <Nav.Link to="/form">
-                <i className="fa fa-users icon"></i>Customers
-              </Nav.Link>
-              <Nav.Link to="/">
-                <i className="fa fa-calculator icon"></i>Accounts
-              </Nav.Link>
-              <Nav.Link href="">
-                <i className="fa fa-info-circle icon"></i>Transaction
-              </Nav.Link>
-              <Nav.Link href="">
-                <i className="fa fa-file-text-o icon"></i>Reports
-              </Nav.Link>
-              <Nav.Link href="">
-                <i className="fa fa-commenting-o icon"></i>PDS Chat
-              </Nav.Link>
-              <Nav.Link href="">
-                <i className="fa fa-list-alt icon"></i>To do
-              </Nav.Link>
-              <Nav.Link href="">
-                <i className="fa fa-calendar icon"></i>Calendar
-              </Nav.Link>
+              <Nav.Item >
+               <Link className="nav-link" to="/"> <i className="fa fa-bolt icon"></i>Masters</Link>
+              </Nav.Item>
+              <Nav.Item>
+              <Link to="/form" className="nav-link">  <i className="fa fa-users icon"></i>Customers</Link>
+              </Nav.Item>
+              <Nav.Item >
+                <Link to=""className="nav-link"> <i className="fa fa-calculator icon"></i>Accounts</Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Link to="" className="nav-link"><i className="fa fa-info-circle icon"></i>Transaction</Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Link to="" className="nav-link"><i className="fa fa-file-text-o icon"></i>Reports</Link>
+              </Nav.Item>
+              <Nav.Item >
+                <Link to="" className="nav-link"><i className="fa fa-commenting-o icon"></i>PDS Chat</Link>
+              </Nav.Item>
+              <Nav.Item >
+                <Link to="" className="nav-link"><i className="fa fa-list-alt icon"></i>To do</Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Link to="" className="nav-link"><i className="fa fa-calendar icon"></i>Calendar</Link>
+              </Nav.Item>
             </Nav>
           </Navbar.Collapse>
         </Container>
