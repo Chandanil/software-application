@@ -7,9 +7,9 @@ import { DocumentForm } from "../Form/Personal/DocumentForm";
 export const Home = () => {
   return (
     <>
-      <div style={{ margin: "40px" }}>
+      {/* <div style={{ margin: "40px" }}>
         <DocumentForm />
-      </div>
+      </div> */}
       <InfoCard />
       <LineChart />
       <Table />

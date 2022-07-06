@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import { AcDetailForm } from "../Form/Personal/AcDetailForm";
 import { DocumentForm } from "../Form/Personal/DocumentForm";
 import { PersonalForm } from "../Form/Personal/PersonalForm";
+import { StepperBottom } from "../StepperBottom/StepperBottom";
+import { StepperHead } from "../StepperHead/StepperHead";
 
 export const Partial = () => {
   const [page, setPage] = useState(1);
+
   const FormTitle = [
     {
       icon: <i className="fa fa-user-circle icon"></i>,
@@ -30,19 +33,7 @@ export const Partial = () => {
   return (
     <>
       <div className="forms">
-        <div className="step-item">
-          <ul>
-            {FormTitle.map((item, index) => {
-              return (
-                <li className={`${page > index && "active"}`} key={index}>
-                  {item.icon}
-                  <span>{item.label}</span>
-                  {/* {item} */}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+        <StepperHead FormTitle={FormTitle} />
         <div className="component-div">
           <div className="display">
             {page === 1 && <PersonalForm />}
@@ -50,29 +41,13 @@ export const Partial = () => {
             {page === 3 && <DocumentForm />}
           </div>
 
-          {page === 1 ? (
-            <button className="cl-btn" onClick={goNextPage}>
-              Save and next
-            </button>
-          ) : page === 3 ? (
-            <div className="btn-group">
-              <button onClick={goBackPage} className="cl-btn">
-                Back
-              </button>
-              <button className="cl-btn cl-btn-op">Save</button>
-            </div>
-          ) : (
-            <>
-              <div className="btn-group">
-                <button onClick={goBackPage} className="cl-btn">
-                  Back
-                </button>
-                <button className="cl-btn cl-btn-op" onClick={goNextPage}>
-                  Next
-                </button>
-              </div>
-            </>
-          )}
+          <StepperBottom
+            page={page}
+            goNextPage={goNextPage}
+            goBackPage={goBackPage}
+            chadanee="my name is chandanee"
+            setLastStep={page === 3 ? true : false}
+          />
         </div>
       </div>
     </>
