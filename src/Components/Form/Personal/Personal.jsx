@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { AcDetailForm } from "../Form/Personal/AcDetailForm";
-import { DocumentForm } from "../Form/Personal/DocumentForm";
-import { PersonalForm } from "../Form/Personal/PersonalForm";
-import { StepperBottom } from "../StepperBottom/StepperBottom";
-import { StepperHead } from "../StepperHead/StepperHead";
+import { StepperBottom } from "../../StepperBottom/StepperBottom";
+import { StepperHead } from "../../StepperHead/StepperHead";
+import { AcDetailForm } from "./AcDetailForm";
+import { DocumentForm } from "./DocumentForm";
+import { PersonalForm } from "./PersonalForm";
 
-export const Partial = () => {
+export const Personal = () => {
   const [page, setPage] = useState(1);
 
   const FormTitle = [
@@ -33,7 +33,7 @@ export const Partial = () => {
   return (
     <>
       <div className="forms">
-        <StepperHead FormTitle={FormTitle} />
+        <StepperHead page={page} FormTitle={FormTitle} />
         <div className="component-div">
           <div className="display">
             {page === 1 && <PersonalForm />}

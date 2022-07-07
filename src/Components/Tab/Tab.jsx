@@ -1,10 +1,8 @@
 import "./Tab.scss";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import {
-  CompanyDetail,
-  InstitutionForm,
-} from "../Form/Institution/CompanyDetail";
-import { Partial } from "../Partial/Partial";
+import { Institution } from "../Form/Institution/Institution";
+import { Personal } from "../Form/Personal/Personal";
+import { Join } from "../Form/Join/Join";
 
 export const ClTab = () => {
   return (
@@ -20,10 +18,13 @@ export const ClTab = () => {
                 <Tab>Join</Tab>
               </TabList>
               <TabPanel>
-                <CompanyDetail />
+                <Institution />
               </TabPanel>
               <TabPanel>
-                <Partial />
+                <Personal />
+              </TabPanel>
+              <TabPanel>
+                <Join />
               </TabPanel>
             </Tabs>
           </div>

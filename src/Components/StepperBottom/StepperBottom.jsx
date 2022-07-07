@@ -1,8 +1,8 @@
 export const StepperBottom = (props) => {
-  debugger;
+  // debugger;
   return (
     <div className="stepper-bottom">
-      {props.chadanee}
+      {/* {props.chadanee} */}
       <div className="btn-group">
         {props.page !== 1 && (
           <button

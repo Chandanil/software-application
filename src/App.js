@@ -4,13 +4,9 @@ import "../src/Components/Style/All.scss";
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header } from "./Components/Header/Header";
 import {  Navs } from "./Components/Navbar/Navbar";
-
-import { Stepper } from "./Components/Form/Stepper";
 import { BrowserRouter, Route, Routes, Router } from "react-router-dom";
 import { Home } from "./Components/Homepage/Home";
-import { Partial } from "./Components/Partial/Partial";
-import { PersonalForm } from "./Components/Form/Personal/PersonalForm";
-import { Tab, Tabs } from "react-tabs";
+// import { Tab, Tabs } from "react-tabs";
 import { ClTab } from "./Components/Tab/Tab";
 // import { AllForm } from "./Components/AllForm";
 

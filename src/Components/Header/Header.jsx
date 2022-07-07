@@ -1,8 +1,12 @@
 import "./Header.scss";
 import { Link } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
+import { FullScreen, useFullScreenHandle } from "react-full-screen";
+import { InfoCard } from "../InfoCard/InfoCard";
 
 export const Header = () => {
+  const handle = useFullScreenHandle();
+
   return (
     <>
       <div className="header-section">
@@ -47,7 +51,10 @@ export const Header = () => {
                 </li>
                 <li className="content-item">
                   <div className="menu-link">
-                    <i className="fa fa-arrows-alt icon"></i>
+                  <i className="fa fa-arrows-alt icon" onClick={handle.enter}></i>
+                 {/* <FullScreen handle={handle}>
+                  < InfoCard />
+                 </FullScreen> */}
                   </div>
                 </li>
                 <li className="content-item">

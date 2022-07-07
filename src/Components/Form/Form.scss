@@ -5,11 +5,28 @@
 
 .sub-title {
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 .form-group {
     margin-bottom: 15px;
     .form-control {
         color: #7985AD;
+        border: none;
+        font-size: 14px;
+        border-bottom: 1px solid #ced4da;
+        border-radius: 0;
+        font-weight: $font-500;
+        &:focus {
+            box-shadow: none;
+            border-bottom: 1px solid #7591ad;
+
+        }
+    }
+    .w-50 {
+        display: inline-block;
+    }
+    .nepali-date {
+        margin-left: 10px;
     }
     label {
         color: #7985AD;
@@ -48,6 +65,7 @@
 }
 li.active {
     color: $primary-color;
+    font-weight: $font-500;
     .icon {
         background-color: $primary-color;
     }
