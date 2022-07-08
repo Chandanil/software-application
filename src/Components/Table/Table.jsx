@@ -44,6 +44,48 @@ export const Table = () => {
       transaction: "Deposit",
       status: "active",
     },
+        {
+      name: "Chandani lama",
+      amount: "Rs.3250.00",
+      savingAmount: 65232.0,
+      transaction: "loan",
+      status: "active",
+    },
+    {
+      name: "Sunita Bagale",
+      amount: "Rs.3250.00",
+      savingAmount: 65232.0,
+      transaction: "Withdraw",
+      status: "active",
+    },
+    {
+      name: "Krishna Thapa",
+      amount: "Rs.3250.00",
+      savingAmount: 65232.0,
+      transaction: "Deposit",
+      status: "active",
+    },
+    {
+      name: "Chandani lama",
+      amount: "Rs.3250.00",
+      savingAmount: 65232.0,
+      transaction: "loan",
+      status: "active",
+    },
+    {
+      name: "Sunita Bagale",
+      amount: "Rs.3250.00",
+      savingAmount: 65232.0,
+      transaction: "Withdraw",
+      status: "active",
+    },
+    {
+      name: "Krishna Thapa",
+      amount: "Rs.3250.00",
+      savingAmount: 65232.0,
+      transaction: "Deposit",
+      status: "active",
+    },
   ];
   return (
     <>
@@ -51,7 +93,7 @@ export const Table = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-12 col-lg-8">
-              <div className="cl-table">
+              <div className="cl-table cl-scroll">
                 <div className="cl-header">
                   <h5 className="title">Transaction Status</h5>
                   <span>02 Nov 2021 to 31 Dec 2021</span>

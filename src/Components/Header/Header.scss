@@ -1,5 +1,4 @@
-@import "../Style/Mixin.scss";
-@import "../Style/Variables.scss";
+@import "../Style/All.scss";
 .header-section {
   background: $bg-color;
   padding: 10px 0;
@@ -88,42 +87,7 @@
     }
   }
 }
-.dropdown-btn,.btn-check:focus+.btn-primary, .btn-primary:focus,
-.dropdown-btn:hover,.show>.btn-primary.dropdown-toggle,
-.show>.btn-primary.dropdown-toggle:focus,
-.dropdown-btn:focus,
-.btn-primary:focus:focus, .dropdown-btn:hover:focus {
-  width: auto;
-  border: none;
-  background: none;
-  outline: none;
-  box-shadow: none;
-  color: #52595f;
-}
-.dropdown-menu {
-  display: none;
-  background: #fff;
-  padding: 15px;
-  margin: 10px 0;
-  left: auto !important;
-  min-width: 300px;
-  text-align: center;
-  transition: all ease-in-out 0.4s;
-  border: none;
-  box-shadow: 0 1px 5px rgb(0 0 0 / 10%);
-  transform: translateX(40px) ;
-  visibility: hidden;
-}
-.dropdown-menu.show {
-  display: block;
-  transform: translateX(0) ;
-  inset: unset ;
-  right: 0 !important;
-  visibility: visible;
-}
-.dropdown-toggle::after{
-  display: none;
-}
+
 .user-detail {
   img {
     width: 100%;
@@ -138,9 +102,8 @@
   text-align: left;
   right: 0;
   .cl-header {
-    padding: 0;
     border: none;
-    padding-bottom: 10px;
+    padding: 10px;
   }
   li{
   display: block;
@@ -181,15 +144,14 @@
   }
   .item {
     transition: $transition;
-    padding: 8px 0;
+    padding: 10px;
     border-top: 1px solid #f2f2f2;
+    transition: $transition;
     &:last-child {
-      padding-bottom: 0;
       border-bottom: none;
     }
     &:first-child {
       border-top: none;
-      padding-top: 0;;
     }
     &:hover {
       background-color: transparent;
@@ -206,7 +168,7 @@
   li {
     display: flex;
     align-items: center;
-    padding: 10px 0;
+    padding: 10px;
     border-top: 1px solid #ebe9f1;
     text-align: center;
     strong {
@@ -225,8 +187,8 @@
   }
 }
 .w-auto {
-  width: auto;
-  min-width: 100%;
+  width: auto !important;
+  min-width: 100% !important;
 }
 @media only screen and (max-width: 991px) {
   .header-section {
@@ -244,19 +206,5 @@ flex-wrap: wrap;
     }
 
   }
-  
-  // .cl-navigation {
-  //   .navbar-nav {
-  //     width: 300px;
-  //     background: #405189;
-  //     right: 0;
-  //     position: fixed;
-  //     top: 0;
-  //     transition: $transition;
-  //     .nav-link {
-  //       color: #fff;
-  //     }
-  //   }
-  // }
   
 }

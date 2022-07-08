@@ -115,3 +115,106 @@ ul {
   text-decoration: line-through;
   color: #cbc9c9;
 }
+.cl-pagination {
+  .page-item{
+.page-link {
+  color: #333
+}
+ &.active{
+      .page-link {
+        background-color: $seconday-color;
+        border-color: $seconday-color;
+        color: #fff;
+      }
+    }
+  }
+  .page-link:foucs {
+    box-shadow: none !important;
+  }
+
+}
+.cl-scroll::-webkit-progress-bar {
+  width: 1px;
+  cursor: pointer;
+  
+}
+.cl-scroll::-webkit-scrollbar-thumb {
+  background: $primary-color;
+  cursor: pointer;
+}
+.dropdown-btn,.btn-check:focus+.btn-primary, .btn-primary:focus,
+.dropdown-btn:hover,.show>.btn-primary.dropdown-toggle,
+.show>.btn-primary.dropdown-toggle:focus,
+.dropdown-btn:focus,
+.btn-primary:focus:focus, .dropdown-btn:hover:focus {
+  width: auto;
+  border: none;
+  background: none;
+  outline: none;
+  box-shadow: none;
+  color: #52595f;
+}
+.dropdown-menu {
+  display: none;
+  background: #fff;
+  padding: 0;
+  margin: 10px 0;
+  left: auto !important;
+  min-width: 300px;
+  text-align: center;
+  transition: all ease-in-out 0.4s;
+  border: none;
+  box-shadow: 0 1px 5px rgb(0 0 0 / 10%);
+  transform: translateX(40px) ;
+  visibility: hidden;
+  li {
+    padding: 10px;
+  }
+  .dropdown-item {
+    padding: 7px 15px;
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 14px;
+    transition: $transition;
+    &:last-child{
+      border-bottom: none;
+    }
+    &:hover {
+      background-color: transparent;
+      color: $seconday-color;
+      margin-left: 5px;
+      transition: $transition;
+    }
+  }
+}
+.dropdown-menu.show {
+  display: block;
+  transform: translateX(0) ;
+  inset: unset ;
+  top: 100% !important;
+  text-align: left;
+  // right: 0 !important;
+  visibility: visible;
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
+  -webkit-animation-fill-mode: both;
+   animation-fill-mode: both; 
+  -webkit-animation-name: slideIn;
+ animation-name: slideIn;
+}
+.header-section{
+  .dropdown-toggle::after{
+  display: none;
+}
+}
+@keyframes slideIn {
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+0% {
+    -webkit-transform: translateY(1rem);
+    transform: translateY(1rem);
+    opacity: 0;
+}
+}

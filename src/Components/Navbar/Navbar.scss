@@ -2,16 +2,11 @@
 .cl-navigation {
   padding: 18px 0;
   .navbar-nav {
-    .nav-link {
-      color: $font-color;
+    .nav-item {
       font-weight: $font-600;
+      padding: 8px 10px;
       font-size: 16px;
-      padding: 8px 13px;
-      margin-right: 10px;
-      transition: $transition;
-      &:last-child {
-        margin-right: 0;
-      }
+      color: $font-color;
       .icon {
         color: $seconday-color;
         margin-right: 5px;
@@ -21,6 +16,25 @@
         .icon {
           color: $primary-color;
         }
+      }
+    }
+    .nav-link {
+      color: $font-color;
+      font-weight: $font-600;
+      font-size: 16px;
+      padding: 0;
+      margin-right: 10px;
+      transition: $transition;
+      display: inline-block;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .dropdown{
+    &.show {
+      .nav-link {
+        color: $seconday-color;
       }
     }
   }

@@ -1,0 +1,5 @@
+while selecting in  all checkbox all email should be checked and unchecked
+to do list 
+fullscreen 
+dropdown,multidropdown and megadrop down
+form validation
