@@ -7,53 +7,54 @@ import Navbar from "react-bootstrap/Navbar";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-import NavDropdown from "react-bootstrap/NavDropdown";
+// import NavDropdown from "react-bootstrap/NavDropdown";
 
 
 export const Navs = () => {
   const [show, setShow] = useState();
-  dropmenu= [
-    {title: "dropdown 1",  submenu: null},
-    {title: "dropdown 2", 
-     submenu: [{
-      title: "dropdown 2.1",
-      submenu: null
+  const dropmenu= [
+    {name: "Voucher"},
+    {name: "dropdown 1",  children: null},
+    {name: "dropdown 2", 
+     children: [{
+      name: "dropdown 2.1",
+      children: null
      },
     {
-      title: "dropdown 2.1",
-      submenu: null
+      name: "dropdown 2.1",
+      children: null
     },
     {
-      title: "dropdown 2.1",
-      submenu: [{
-        title: "dropdown 2.1.1",
-        submenu: null
+      name: "dropdown 2.1",
+      children: [{
+        name: "dropdown 2.1.1",
+        children: null
       },
-      {title: "dropdown 2.1.1",
-      submenu: "null"
+      {name: "dropdown 2.1.1",
+      children: "null"
     },
     ]
     },
     ]
   },
-    {title: "dropdown 3",  submenu: null},
-    {title: "dropdown 4", 
-    submenu: [{
-     title: "dropdown 4.1",
-     submenu: null
+    {name: "dropdown 3",  children: null},
+    {name: "dropdown 4", 
+    children: [{
+     name: "dropdown 4.1",
+     children: null
     },
    {
-     title: "dropdown 4.1",
-     submenu: null
+     name: "dropdown 4.1",
+     children: null
    },
    {
-     title: "dropdown 4.1",
-     submenu: [{
-       title: "dropdown 4.1.1",
-       submenu: null
+     name: "dropdown 4.1",
+     children: [{
+       name: "dropdown 4.1.1",
+       children: null
      },
-     {title: "dropdown 4.1.1",
-     submenu: "null"
+     {name: "dropdown 4.1.1",
+     children: "null"
    },
    ]
    },
@@ -67,30 +68,56 @@ export const Navs = () => {
           {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Dropdown className="cl-dropdown">
+            {dropmenu.map((menu) => {
+              return (
+                <div>
+              <Dropdown className="cl-dropdown">            
                 <Dropdown.Toggle className="dropdown-btn nav-item ">
-                 <i className="fa fa-bolt icon"></i><span>Voucher</span>
+                 <i className="fa fa-bolt icon"></i><span> {menu.name}</span>
                 </Dropdown.Toggle>
-                <Dropdown.Menu className="dropdown-menu cl-dropdown-menu">
-                  {/* <Dropdown.Item>
-                   <Link className="nav-link" to="">Journal Voucher</Link>
-                  </Dropdown.Item> */}
-                  <Dropdown.Item href="#/action-1" onClick={()=>setShow(false)}>Journal Voucher</Dropdown.Item>
-                  <Dropdown.Item href="#/action-1">Receipt Voucher</Dropdown.Item>
+                  <Dropdown.Menu className="dropdown-menu cl-dropdown-menu">
+                   {menu.children &&
+                    menu.children.map((item) => {
+                      return (
+                        <>
+                        <Dropdown.Item >
+                        {item.name}
+                        {item.children &&
+                        item.children.map((submenu) => {
+                       return(
+                        <>
+                         <Dropdown.Submenu position="right">
+                          <Dropdown.Item>{submenu.name}
+                          </Dropdown.Item>
+                          {item.children &&
+                            item.children.map((submenu) => (
+                            <Dropdown.Submenu position="right">
+                              <Dropdown.Item>{submenu.name}</Dropdown.Item>
+                            </Dropdown.Submenu>
+                          ))}
+                        </Dropdown.Submenu>
+                        </>
+                       )
+                       })}
+                      </Dropdown.Item>
+                        </>
+                      );
+                            })}
+                  {/* <Dropdown.Item href="#/action-1">Receipt Voucher</Dropdown.Item>
                   <Dropdown.Item href="#/action-1">Payment Voucher</Dropdown.Item>
                   <Dropdown.Item href="#/action-1">Previous Year Voucher</Dropdown.Item>
                   <Dropdown.Item href="#/action-1">Opening Balance Voucher</Dropdown.Item>
-                  <Dropdown.Item href="#/action-1">Show Voucher</Dropdown.Item>
-                </Dropdown.Menu>
+                  <Dropdown.Item href="#/action-1">Show Voucher</Dropdown.Item> */}
+              </Dropdown.Menu>
               </Dropdown>
-              <Dropdown className="cl-dropdown">
+            </div>
+            );
+          })}
+              {/* <Dropdown className="cl-dropdown">
                 <Dropdown.Toggle className="dropdown-btn nav-item">
                 <Link className="nav-link" to="/"> <i className="fa fa-bolt icon"></i>Reports</Link>
                 </Dropdown.Toggle>
                 <Dropdown.Menu className="dropdown-menu cl-dropdown-menu">
-                  {/* <Dropdown.Item>
-                   <Link className="nav-link" to="">Journal Voucher</Link>
-                  </Dropdown.Item> */}
                   <Dropdown.Item href="#/action-1">Ledger</Dropdown.Item>
                   <Dropdown.Item href="#/action-1">Cash/ Bank Book</Dropdown.Item>
                   <Dropdown.Item href="#/action-1">Day Book</Dropdown.Item>
@@ -101,7 +128,7 @@ export const Navs = () => {
                   <Dropdown.Item href="#/action-1">Profi and Loss Account</Dropdown.Item>
                   <Dropdown.Item href="#/action-1">Cash Flow Statement</Dropdown.Item>
                 </Dropdown.Menu>
-              </Dropdown>
+              </Dropdown> */}
               <Nav.Item >
                 <Link to="/form"className="nav-link"> <i className="fa fa-calculator icon"></i>Customers</Link>
               </Nav.Item>

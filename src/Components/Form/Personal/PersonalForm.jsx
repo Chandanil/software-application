@@ -9,6 +9,7 @@ export const PersonalForm = () => {
   const [date, setDate] = useState("");
   const [fatherName, setFatherName] = useState("");
   const [motherName, setMotherName] = useState("");
+  const [grandfather, setGrandfather] = useState("");
 
   return (
     <>
@@ -27,9 +28,9 @@ export const PersonalForm = () => {
                         type="text"
                         placeholder="Full Name"
                         className="form-control"
-                        onChange={(e) => {
+                        onChange="{(e) => {
                           setFullName(e.target.value);
-                        }}
+                        }}" value={fullName}
                       />
                     </div>
                   </div>
@@ -70,7 +71,8 @@ export const PersonalForm = () => {
                     <div className="form-group">
                       <input type="text" 
                       placeholder="Grand  Father Name"
-                      className="form-control" />
+                      className="form-control" 
+                      onChange={(e) => {setGrandfather(e.target.value)}}/>
                     </div>
                   </div>
                   <div className="col-sm-6 col-lg-3">
