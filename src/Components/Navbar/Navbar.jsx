@@ -21,19 +21,19 @@ export const Navs = () => {
       children: null
      },
     {
-      name: "dropdown 2.1",
+      name: "dropdown 2.2",
       children: null
     },
     {
-      name: "dropdown 2.1",
+      name: "dropdown 2.3",
       children: [{
-        name: "dropdown 2.1.1",
-        children: null
-      },
-      {name: "dropdown 2.1.1",
-      children: "null"
-    },
-    ]
+          name: "Ashish",
+          children: null
+          },
+          {name: "Chandani",
+          children: "null"
+          },
+      ]
     },
     ]
   },
@@ -69,15 +69,34 @@ export const Navs = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
             {dropmenu.map((menu) => {
+              
               return (
                 <div>
               <Dropdown className="cl-dropdown">            
-                <Dropdown.Toggle className="dropdown-btn nav-item ">
+                <div className="dropdown-btn nav-item ">
                  <i className="fa fa-bolt icon"></i><span> {menu.name}</span>
-                </Dropdown.Toggle>
+                 
+                </div>
                   <Dropdown.Menu className="dropdown-menu cl-dropdown-menu">
-                   {menu.children &&
+                  {menu.children &&
                     menu.children.map((item) => {
+                      return(
+                        <Dropdown.Item >
+                         {item.name}
+                          <div className="right">
+                          {item.children && item.children.map((child)=>{
+                            return(
+                                <Dropdown.Item >{child.name}</Dropdown.Item>
+                                )
+                              })}
+                              </div>
+                          
+                        </Dropdown.Item >
+                      );
+                    })}
+                   {/* {menu.children &&
+                    menu.children.map((item) => {
+                    
                       return (
                         <>
                         <Dropdown.Item >
@@ -86,23 +105,23 @@ export const Navs = () => {
                         item.children.map((submenu) => {
                        return(
                         <>
-                         <Dropdown.Submenu position="right">
+                         <Dropdown position="right">
                           <Dropdown.Item>{submenu.name}
                           </Dropdown.Item>
                           {item.children &&
-                            item.children.map((submenu) => (
-                            <Dropdown.Submenu position="right">
-                              <Dropdown.Item>{submenu.name}</Dropdown.Item>
-                            </Dropdown.Submenu>
+                            item.children.map((submen) => (
+                            <Dropdown position="right">
+                              <Dropdown.Item>{submen.name}</Dropdown.Item>
+                            </Dropdown>
                           ))}
-                        </Dropdown.Submenu>
+                        </Dropdown>
                         </>
                        )
                        })}
                       </Dropdown.Item>
                         </>
                       );
-                            })}
+                            })} */}
                   {/* <Dropdown.Item href="#/action-1">Receipt Voucher</Dropdown.Item>
                   <Dropdown.Item href="#/action-1">Payment Voucher</Dropdown.Item>
                   <Dropdown.Item href="#/action-1">Previous Year Voucher</Dropdown.Item>
