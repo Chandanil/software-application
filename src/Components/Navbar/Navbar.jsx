@@ -73,10 +73,10 @@ export const Navs = () => {
               return (
                 <div>
               <Dropdown className="cl-dropdown">            
-                <div className="dropdown-btn nav-item ">
+                <Dropdown.Toggle className="dropdown-btn nav-item ">
                  <i className="fa fa-bolt icon"></i><span> {menu.name}</span>
                  
-                </div>
+                </Dropdown.Toggle>
                   <Dropdown.Menu className="dropdown-menu cl-dropdown-menu">
                   {menu.children &&
                     menu.children.map((item) => {
@@ -94,39 +94,6 @@ export const Navs = () => {
                         </Dropdown.Item >
                       );
                     })}
-                   {/* {menu.children &&
-                    menu.children.map((item) => {
-                    
-                      return (
-                        <>
-                        <Dropdown.Item >
-                        {item.name}
-                        {item.children &&
-                        item.children.map((submenu) => {
-                       return(
-                        <>
-                         <Dropdown position="right">
-                          <Dropdown.Item>{submenu.name}
-                          </Dropdown.Item>
-                          {item.children &&
-                            item.children.map((submen) => (
-                            <Dropdown position="right">
-                              <Dropdown.Item>{submen.name}</Dropdown.Item>
-                            </Dropdown>
-                          ))}
-                        </Dropdown>
-                        </>
-                       )
-                       })}
-                      </Dropdown.Item>
-                        </>
-                      );
-                            })} */}
-                  {/* <Dropdown.Item href="#/action-1">Receipt Voucher</Dropdown.Item>
-                  <Dropdown.Item href="#/action-1">Payment Voucher</Dropdown.Item>
-                  <Dropdown.Item href="#/action-1">Previous Year Voucher</Dropdown.Item>
-                  <Dropdown.Item href="#/action-1">Opening Balance Voucher</Dropdown.Item>
-                  <Dropdown.Item href="#/action-1">Show Voucher</Dropdown.Item> */}
               </Dropdown.Menu>
               </Dropdown>
             </div>
