@@ -153,7 +153,7 @@ export const Header = () => {
                     <Dropdown.Menu className="w-auto dropdown-menu cl-dropdown-menu user-dropdown-menu ">
                       <ul>
                         <li className="item">
-                          <Link to="/profile">
+                          <Link to="/login">
                             <i className="fa fa-user"></i>
                             <span>Profile</span>
                           </Link>

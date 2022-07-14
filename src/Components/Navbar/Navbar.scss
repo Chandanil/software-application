@@ -2,6 +2,9 @@
 .cl-navigation {
   padding: 18px 0;
   .navbar-nav {
+    .down-icon {
+      margin-left: 10px;
+    }
     .nav-item {
       font-weight: $font-600;
       padding: 8px 10px;
@@ -17,13 +20,21 @@
           color: $primary-color;
         }
       }
+      .nav-link{
+      &:hover {
+        color: $seconday-color;
+        .icon {
+          color: $primary-color;
+        }
+      }
+    }
     }
     .nav-link {
       color: $font-color;
       font-weight: $font-600;
       font-size: 16px;
       padding: 0;
-      margin-right: 10px;
+      // margin-right: 10px;
       transition: $transition;
       display: inline-block;
       &:last-child {
@@ -31,14 +42,73 @@
       }
     }
   }
+  .cl-dropdown
+{
+  .dropdown-menu {
+    visibility: visible;
+  }
+  .dropdown-toggle {
+    &:after {
+      display: none;
+    }
+  }
+  &:hover{
+   .dropdown-menu{
+      display: block;
+      left: 0 !important;
+      transform: translate(0);
+      .nav-item {
+        position: relative;
+        }
+        ul {
+          display: none;
+          position: absolute;
+          left: 100% !important;
+          top: -7px;
+          }
+            .dropdown-item{
+              position: relative;
+              text-align: left;
+              .dropdown-link {
+                margin-right: 10px;
+                &:hover {
+                  color: $seconday-color;
+                }
+              }
+              &:hover {
+               ul {
+                  display: block;
+                  ul {
+                    display: none;
+                    right: 100%;
+                    left: auto;
+                    }
+                    .dropdown-item{
+                      &:hover {
+                        ul {
+                          display: block;
+                        }
+                      }
+                    }
+                  }
+              }
+            }
+  }
+}
+}
   .dropdown{
     &.show {
       .nav-link {
         color: $seconday-color;
       }
     }
+    li {
+      display: block;
+    }
   }
 }
+
+
 @media only screen and (max-width: 991px)
 {
   .navbar-collapse {
@@ -58,6 +128,9 @@
         .icon {
           display: block;
         }
+      }
+      .dropdown-menu {
+        position: absolute;
       }
     }
   }

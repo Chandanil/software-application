@@ -68,7 +68,7 @@ export const Navs = () => {
           {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-            {dropmenu.map((menu) => {
+            {/* {dropmenu.map((menu) => {
               
               return (
                 <div>
@@ -98,13 +98,17 @@ export const Navs = () => {
               </Dropdown>
             </div>
             );
-          })}
-              {/* <Dropdown className="cl-dropdown">
-                <Dropdown.Toggle className="dropdown-btn nav-item">
-                <Link className="nav-link" to="/"> <i className="fa fa-bolt icon"></i>Reports</Link>
-                </Dropdown.Toggle>
+          })} */}
+              <div className="cl-dropdown">
+              <Dropdown.Item className="dropdown"> <i className="fa fa-bolt icon"></i>Reports</Dropdown.Item>
                 <Dropdown.Menu className="dropdown-menu cl-dropdown-menu">
-                  <Dropdown.Item href="#/action-1">Ledger</Dropdown.Item>
+                  <Dropdown.Item href="#/action-1">Ledger
+                  <Dropdown.Menu className="dropdown-menu cl-dropdown-menu dropdown-submenu ">
+                      <Dropdown.Item >Chandani</Dropdown.Item>
+                      <Dropdown.Item >Kiran</Dropdown.Item>
+                      <Dropdown.Item >Moon</Dropdown.Item>
+                  </Dropdown.Menu>
+                   </Dropdown.Item>
                   <Dropdown.Item href="#/action-1">Cash/ Bank Book</Dropdown.Item>
                   <Dropdown.Item href="#/action-1">Day Book</Dropdown.Item>
                   <Dropdown.Item href="#/action-1">Transaction List</Dropdown.Item>
@@ -114,7 +118,7 @@ export const Navs = () => {
                   <Dropdown.Item href="#/action-1">Profi and Loss Account</Dropdown.Item>
                   <Dropdown.Item href="#/action-1">Cash Flow Statement</Dropdown.Item>
                 </Dropdown.Menu>
-              </Dropdown> */}
+              </div>
               <Nav.Item >
                 <Link to="/form"className="nav-link"> <i className="fa fa-calculator icon"></i>Customers</Link>
               </Nav.Item>
