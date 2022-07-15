@@ -6,61 +6,92 @@
   import Navbar from "react-bootstrap/Navbar";
   import {Link, useNavigate } from "react-router-dom";
   export const MainNavbar = () =>{ 
+    const dropmenu = [
+      {name: "voucher 1", icon: <i className="fa fa-bolt icon"></i>,
+      submenu: [
+        {name: "voucher 2.1", submenu: null},
+        {name: "voucher 2.2", submenu: null},
+        {name: "voucher 2.3",
+        submenu: [
+          {name: "voucher 2.3.1", submenu: null},
+          {name: "voucher 2.3.2", submenu: null},
+          {name: "voucher 2.3.3", submenu: null},
+        ]
+      },
+      ]
+    },
+    {name: "Customer", icon: <i className="fa fa-file-text-o icon"></i>, submenu: null}
+    ]
   return (
     <>
   <nav id="site-navigation " className="navbar navbar-expand-lg  cl-navigation">
     <div className="container-fluid">
       <div className="navbar-collapse custom-collapsed" id="navbarCollapse">
-        <ul className="navbar-nav cl-navbar">
+        {dropmenu.map((menu, index) => {
+        return (
+          <>
+          <ul className="navbar-nav cl-navbar">
           <li className="nav-item dropdown cl-dropdown ">
             <span className="nav-link dropdown-toggle" 
             id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i className="fa fa-bolt icon"></i> Voucher</span>
+            {menu.icon} {menu.name}</span>
             <i className="fa fa-angle-down down-icon" />
-            <ul className="dropdown-menu cl-dropdown-menu">
-              <li className="dropdown-item">
-                <Link to="/lg" className="dropdown-link">Ledger Voucher</Link>
-              </li>
-              <li className="dropdown dropdown-item">
-              <Link to="/lg" className="dropdown-link">Ledger Voucher 1</Link>
-                <i className="fa fa-angle-right down-icon" />
-                <ul className="dropdown-menu cl-dropdown-menu dropdown-submenu">
-                  <li className="dropdown-item"> 
-                  <Link to="/lg" className="dropdown-link">Ledger Voucher 1.1</Link>
-                  </li>
+            {menu.submenu && menu.submenu.map((item)=>{
+              return(
+                <>
+                <ul className="dropdown-menu cl-dropdown-menu">
                   <li className="dropdown-item">
-                  <Link to="/lg" className="dropdown-link">Ledger Voucher 1.2</Link>
-                     </li>
-                  <li className="dropdown-item dropdown"> 
-                  <Link to="/lg" className="dropdown-link">Ledger Voucher 1.3</Link>
-                  <i className="fa fa-angle-right down-icon" />
-                    <ul className="dropdown-menu dropdown-submenu-left">
-                      <li className="dropdown-item">
-                      <Link to="/lg" className="dropdown-link">Ledger Voucher 1.3.1</Link>
-                         </li>
-                      <li className="dropdown-item"> 
-                      <Link to="/lg" className="dropdown-link">Ledger Voucher 1.3.2</Link>
-                      </li>
-                      <li className="dropdown-item"> 
-                      <Link to="/lg" className="dropdown-link">Ledger Voucher 1.3.3</Link>
-                      </li>
-                    </ul>
+                    <Link to="/lg" className="dropdown-link">{item.name}</Link>
                   </li>
+                  {item.submenu && item.submenu.map ((child) => {
+                    return (
+                      <>
+                          <li className="dropdown dropdown-item">
+                      <Link to="/lg" className="dropdown-link">Ledger Voucher 1</Link>
+                        <i className="fa fa-angle-right down-icon" />
+                        <ul className="dropdown-menu cl-dropdown-menu dropdown-submenu">
+                          <li className="dropdown-item"> 
+                          <Link to="/lg" className="dropdown-link">Ledger Voucher 1.1</Link>
+                          </li>
+                          <li className="dropdown-item">
+                          <Link to="/lg" className="dropdown-link">Ledger Voucher 1.2</Link>
+                            </li>
+                          <li className="dropdown-item dropdown"> 
+                          <Link to="/lg" className="dropdown-link">Ledger Voucher 1.3</Link>
+                          <i className="fa fa-angle-right down-icon" />
+                            <ul className="dropdown-menu dropdown-submenu-left">
+                              <li className="dropdown-item">
+                              <Link to="/lg" className="dropdown-link">Ledger Voucher 1.3.1</Link>
+                                </li>
+                              <li className="dropdown-item"> 
+                              <Link to="/lg" className="dropdown-link">Ledger Voucher 1.3.2</Link>
+                              </li>
+                              <li className="dropdown-item"> 
+                              <Link to="/lg" className="dropdown-link">Ledger Voucher 1.3.3</Link>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li className="dropdown-item">
+                      <Link to="/lg" className="dropdown-link">Ledger Voucher 2</Link>
+                      </li>
+                      <li className="dropdown-item">
+                      <Link to="/lg" className="dropdown-link">Ledger Voucher 3</Link>
+                      </li>
+                      <li className="dropdown-item">
+                      <Link to="/lg" className="dropdown-link">Ledger Voucher 4</Link>
+                      </li>
+                      </>
+                    );
+                  })}
                 </ul>
-              </li>
-              <li className="dropdown-item">
-              <Link to="/lg" className="dropdown-link">Ledger Voucher 2</Link>
-              </li>
-              <li className="dropdown-item">
-              <Link to="/lg" className="dropdown-link">Ledger Voucher 3</Link>
-              </li>
-              <li className="dropdown-item">
-              <Link to="/lg" className="dropdown-link">Ledger Voucher 4</Link>
-              </li>
-            </ul>
+              </>
+              );
+            })}
           </li>
           <li className="nav-item ">
-          <Link to="/form" className="dropdown-link"><i className="fa fa-file-text-o icon"></i>Customers</Link>
+          {/* <Link to="/form" className="dropdown-link"><i className="fa fa-file-text-o icon"></i>Customers</Link> */}
           </li>
           <li className="nav-item ">
           <Link to="/lg" className="dropdown-link"><i className="fa fa-address-card-o icon"></i>Reports</Link>
@@ -72,6 +103,9 @@
           <Link to="/lg" className="dropdown-link"><i className="fa fa-list-alt icon"></i>To Do</Link>
           </li>
         </ul>
+          </>
+        )
+        })}
       </div>
     </div>
   </nav>

@@ -1,8 +1,13 @@
 .login-form {
+    background: url("../../../public/Images/login-bg.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 75px 0;
     .cl-form {
-        width: 550px;
+        width: 420px;
         margin: 0 auto;
         border-radius: 15px;
+        padding: 60px 15px;
         .cl-title {
             text-align: center;
             margin-bottom: 15px;
