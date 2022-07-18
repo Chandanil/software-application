@@ -9,8 +9,8 @@
     const dropmenu = [
       {name: "voucher 1", icon: <i className="fa fa-bolt icon"></i>,
       submenu: [
-        {name: "voucher 2.1", submenu: null},
-        {name: "voucher 2.2", submenu: null},
+        // {name: "voucher 2.1", submenu: null},
+        // {name: "voucher 2.2", submenu: null},
         {name: "voucher 2.3",
         submenu: [
           {name: "voucher 2.3.1", submenu: null},
@@ -43,37 +43,40 @@
                   <li className="dropdown-item">
                     <Link to="/lg" className="dropdown-link">{item.name}</Link>
                   </li>
-                  {item.submenu && item.submenu.map ((child) => {
+                  {item.submenu && item.submenu.map ((menu) => {
                     return (
                       <>
-                          <li className="dropdown dropdown-item">
-                      <Link to="/lg" className="dropdown-link">Ledger Voucher 1</Link>
+                      <li className="dropdown dropdown-item">
+                      <Link to="/lg" className="dropdown-link">{menu.name}</Link>
                         <i className="fa fa-angle-right down-icon" />
-                        <ul className="dropdown-menu cl-dropdown-menu dropdown-submenu">
-                          <li className="dropdown-item"> 
-                          <Link to="/lg" className="dropdown-link">Ledger Voucher 1.1</Link>
-                          </li>
-                          <li className="dropdown-item">
-                          <Link to="/lg" className="dropdown-link">Ledger Voucher 1.2</Link>
+                        {item.submenu && item.submenu.map ((menuChild) => {
+                          return (
+                            <>
+                          <ul className="dropdown-menu cl-dropdown-menu dropdown-submenu">
+                            <li className="dropdown-item"> 
+                            <Link to="/lg" className="dropdown-link">{menuChild.name}</Link>
                             </li>
-                          <li className="dropdown-item dropdown"> 
-                          <Link to="/lg" className="dropdown-link">Ledger Voucher 1.3</Link>
-                          <i className="fa fa-angle-right down-icon" />
-                            <ul className="dropdown-menu dropdown-submenu-left">
-                              <li className="dropdown-item">
-                              <Link to="/lg" className="dropdown-link">Ledger Voucher 1.3.1</Link>
-                                </li>
-                              <li className="dropdown-item"> 
-                              <Link to="/lg" className="dropdown-link">Ledger Voucher 1.3.2</Link>
-                              </li>
-                              <li className="dropdown-item"> 
-                              <Link to="/lg" className="dropdown-link">Ledger Voucher 1.3.3</Link>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
+                            <li className="dropdown-item dropdown"> 
+                            <Link to="/lg" className="dropdown-link">{menuChild.name}</Link>
+                            <i className="fa fa-angle-right down-icon" />
+                            {item.submenu && item.submenu.map ((Child) => {
+                              return (
+                                <>
+                                <ul className="dropdown-menu dropdown-submenu-left">
+                                  <li className="dropdown-item">
+                                  <Link to="/lg" className="dropdown-link">{Child.name}</Link>
+                                    </li>
+                                </ul>
+                               </>
+                              );
+                            })}
+                            </li>
+                          </ul> 
+                          </>
+                         );
+                       })}
                       </li>
-                      <li className="dropdown-item">
+                      {/* <li className="dropdown-item">
                       <Link to="/lg" className="dropdown-link">Ledger Voucher 2</Link>
                       </li>
                       <li className="dropdown-item">
@@ -81,7 +84,7 @@
                       </li>
                       <li className="dropdown-item">
                       <Link to="/lg" className="dropdown-link">Ledger Voucher 4</Link>
-                      </li>
+                      </li> */}
                       </>
                     );
                   })}
@@ -89,9 +92,6 @@
               </>
               );
             })}
-          </li>
-          <li className="nav-item ">
-          {/* <Link to="/form" className="dropdown-link"><i className="fa fa-file-text-o icon"></i>Customers</Link> */}
           </li>
           <li className="nav-item ">
           <Link to="/lg" className="dropdown-link"><i className="fa fa-address-card-o icon"></i>Reports</Link>
