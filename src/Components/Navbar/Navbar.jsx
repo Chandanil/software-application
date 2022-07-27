@@ -111,12 +111,6 @@ export const Navs = () => {
                    </Dropdown.Item>
                   <Dropdown.Item href="#/action-1">Cash/ Bank Book</Dropdown.Item>
                   <Dropdown.Item href="#/action-1">Day Book</Dropdown.Item>
-                  <Dropdown.Item href="#/action-1">Transaction List</Dropdown.Item>
-                  <Dropdown.Item href="#/action-1">Trial Balance Detail</Dropdown.Item>
-                  <Dropdown.Item href="#/action-1">Trial Balance Summary</Dropdown.Item>
-                  <Dropdown.Item href="#/action-1">balance Sheet</Dropdown.Item>
-                  <Dropdown.Item href="#/action-1">Profi and Loss Account</Dropdown.Item>
-                  <Dropdown.Item href="#/action-1">Cash Flow Statement</Dropdown.Item>
                 </Dropdown.Menu>
               </div>
               <Nav.Item >
