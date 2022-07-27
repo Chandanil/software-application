@@ -1,5 +1,7 @@
 import "./EmailList.scss";
 import Pagination from 'react-bootstrap/Pagination';
+import {useState} from 'react';
+import $ from 'jquery';
 
 export const EmailList = () => {
   let active = 2;
@@ -11,6 +13,32 @@ for (let number = 1; number <= 5; number++) {
     </Pagination.Item>,
   );
 }
+const [selectall,setSelectAll] = useState(false)
+
+
+$(document).ready(function(){
+  $('.selectall').on("change",function(){
+    if($(this).is(":checked")){
+      $('.item-select').find('input[type="checkbox"]').each(function(){
+        $(this).attr('checked','true');
+      })
+      
+    }else{
+      $('.item-select').find('input[type="checkbox"]').each(function(){
+        $(this).removeAttr('checked');
+      })
+    }
+   
+  })
+
+  // $('input[type="checkbox"]').on("change",function(){
+  //   if($(this).is(":checked")){
+  //     $(this).attr('checked','true');
+  //   }else{
+  //     $(this).removeAttr('checked');
+  //   }
+  // })
+})
   return (
     <>
       <div className="emaillist">
@@ -19,7 +47,7 @@ for (let number = 1; number <= 5; number++) {
         </div>
         <div className="email-body">
           <div className="select-all">
-            <input type="checkbox" />
+            <input type="checkbox" class="selectall"/>
             <label>Select All</label>
           </div>
           <ul>
